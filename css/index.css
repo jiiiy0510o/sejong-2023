@@ -9,6 +9,9 @@ body b {
 body h1 {
   font-size: 24px;
 }
+body button {
+  cursor: pointer;
+}
 body header {
   display: flex;
   justify-content: center;
@@ -122,6 +125,7 @@ body .showNav > li.active {
   background-color: white;
 }
 body main {
+  position: relative;
   width: 100%;
 }
 body main .imgSlide {
@@ -139,6 +143,7 @@ body main .imgSlide .slider {
   z-index: 12;
 }
 body main .imgSlide .slider div {
+  cursor: pointer;
   margin-right: 8px;
   width: 12px;
   height: 6px;
@@ -159,7 +164,7 @@ body main .imgSlide .slider div.mark {
   width: 32px;
 }
 body main .imgSlide .imgBox {
-  height: 700px;
+  height: 800px;
 }
 body main .imgSlide .imgBox img {
   position: absolute;
@@ -255,16 +260,27 @@ body main article .eventSlide .exhibit .dots {
   padding: 16px;
 }
 body main article .eventSlide .exhibit .dots div {
+  margin-top: 12px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: #bbb;
 }
 body main article .eventSlide .exhibit .dots div:first-child {
-  background-color: #777;
+  background-color: #666;
 }
-body main article .eventSlide .exhibit .dots i {
-  font-size: 1.2rem;
+body main article .eventSlide .exhibit .dots div:last-child {
+  background: 0;
+  border: 1px solid #888;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main article .eventSlide .exhibit .dots div:last-child i {
+  font-size: 0.82rem;
   color: #777;
 }
 body main article .eventSlide .closure {
@@ -281,7 +297,7 @@ body main article .eventSlide .closure div:first-child {
   border: 0;
 }
 body main article .eventSlide .closure ul {
-  padding: 8px 0 88px 0;
+  padding: 8px 0 136px 0;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
 }
@@ -326,6 +342,11 @@ body main article .flexBoard section .title {
 body main article .flexBoard section .title .circle {
   background-color: #ff8401;
 }
+body main article .flexBoard section .title span {
+  font-size: 2 rem;
+  cursor: pointer;
+  color: #222;
+}
 body main article .flexBoard section .boardList {
   display: flex;
   align-items: center;
@@ -337,13 +358,16 @@ body main article .flexBoard section .boardList:nth-child(2) {
 body main article .flexBoard section .boardList:last-child {
   margin-bottom: 24px;
 }
+body main article .flexBoard section .boardList:hover > .memo {
+  color: #222;
+}
 body main article .flexBoard section .boardList .date {
   text-align: center;
   font-size: 1.4rem;
   width: 20%;
+  font-weight: 600;
 }
 body main article .flexBoard section .boardList .date span {
-  font-weight: 700;
   font-size: 0.9rem;
   color: #888;
 }
@@ -354,6 +378,7 @@ body main article .flexBoard section .boardList .memo {
   white-space: nowrap;
   text-overflow: ellipsis;
   word-break: break-all;
+  font-weight: 600;
 }
 body main article.reserve {
   display: flex;
@@ -509,6 +534,25 @@ body main article.introduce .placeContainer .placeWrap .place dl dt {
   padding-top: 8px;
   font-weight: 900;
   font-size: 24px;
+}
+body main .topBtn {
+  position: fixed;
+  bottom: -100px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 0;
+  background-color: black;
+  color: white;
+  font-size: 0.74rem;
+  font-weight: 700;
+  transition: top 1s ease-out;
+}
+body main .topBtn i {
+  position: relative;
+  top: -4px;
+  font-size: 0.6em;
 }
 body footer {
   width: 100%;

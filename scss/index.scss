@@ -8,6 +8,9 @@ body {
   h1 {
     font-size: 24px;
   }
+  button {
+    cursor: pointer;
+  }
   header {
     display: flex;
     justify-content: center;
@@ -126,7 +129,9 @@ body {
     }
   }
   main {
+    position: relative;
     width: 100%;
+
     .imgSlide {
       position: relative;
       overflow: hidden;
@@ -141,6 +146,7 @@ body {
         z-index: 12;
 
         div {
+          cursor: pointer;
           margin-right: 8px;
           width: 12px;
           height: 6px;
@@ -163,7 +169,7 @@ body {
         }
       }
       .imgBox {
-        height: 700px;
+        height: 800px;
         img {
           position: absolute;
           top: 0;
@@ -261,17 +267,28 @@ body {
             gap: 12px;
             padding: 16px;
             div {
+              margin-top: 12px;
               width: 8px;
               height: 8px;
               border-radius: 50%;
               background-color: #bbb;
               &:first-child {
-                background-color: #777;
+                background-color: #666;
               }
-            }
-            i {
-              font-size: 1.2rem;
-              color: #777;
+              &:last-child {
+                background: 0;
+                border: 1px solid #888;
+                border-radius: 4px;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i {
+                  font-size: 0.82rem;
+                  color: #777;
+                }
+              }
             }
           }
         }
@@ -289,7 +306,7 @@ body {
             }
           }
           ul {
-            padding: 8px 0 88px 0;
+            padding: 8px 0 136px 0;
             border-left: 1px solid #ddd;
             border-right: 1px solid #ddd;
             li {
@@ -333,6 +350,11 @@ body {
             .circle {
               background-color: #ff8401;
             }
+            span {
+              font-size: 2 rem;
+              cursor: pointer;
+              color: #222;
+            }
           }
           .boardList {
             display: flex;
@@ -344,12 +366,15 @@ body {
             &:last-child {
               margin-bottom: 24px;
             }
+            &:hover > .memo {
+              color: #222;
+            }
             .date {
               text-align: center;
               font-size: 1.4rem;
               width: 20%;
+              font-weight: 600;
               span {
-                font-weight: 700;
                 font-size: 0.9rem;
                 color: #888;
               }
@@ -361,6 +386,7 @@ body {
               white-space: nowrap;
               text-overflow: ellipsis;
               word-break: break-all;
+              font-weight: 600;
             }
           }
         }
@@ -520,6 +546,25 @@ body {
             }
           }
         }
+      }
+    }
+    .topBtn {
+      position: fixed;
+      bottom: -100px;
+      right: 32px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 0;
+      background-color: black;
+      color: white;
+      font-size: 0.74rem;
+      font-weight: 700;
+      transition: top 1s ease-out;
+      i {
+        position: relative;
+        top: -4px;
+        font-size: 0.6em;
       }
     }
   }
