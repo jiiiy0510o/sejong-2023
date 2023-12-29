@@ -1,13 +1,13 @@
 //헤더네비
 let headerNav = document.querySelectorAll("header ul > li > a");
-
+let showNav = document.querySelector(".showNav");
 for (let i = 0; i < headerNav.length; i++) {
   let showIndex;
   headerNav[i].addEventListener("mouseenter", function () {
     showIndex = document.querySelector(`.showNav > li:nth-child(${i + 1})`);
     showIndex.classList.add("active");
   });
-  headerNav[i].addEventListener("mouseleave", function () {
+  showNav.addEventListener("mouseleave", function () {
     showIndex.classList.remove("active");
   });
 }

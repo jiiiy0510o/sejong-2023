@@ -5,7 +5,6 @@ span,
 applet,
 object,
 iframe,
-h1,
 h2,
 h3,
 h4,
@@ -32,7 +31,6 @@ s,
 samp,
 small,
 strike,
-strong,
 sub,
 sup,
 tt,
@@ -100,9 +98,7 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+
 ol,
 ul {
   list-style: none;
@@ -126,4 +122,23 @@ table {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+button {
+  cursor: pointer;
 }
