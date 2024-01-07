@@ -16,6 +16,7 @@ for (let i = 0; i < headerNav.length; i++) {
 let imgIndex;
 let sliderMark;
 let i = 1;
+let slideInterval;
 
 function showInterval() {
   // 현재 이미지와 슬라이더 마크에서 클래스 제거
@@ -30,22 +31,42 @@ function showInterval() {
     i = 1;
   }
 
-  // i 값에 따라 새로운 imgIndex와 sliderMark를 설정합니다.
+  // i 값에 따라 새로운 imgIndex와 sliderMark 설정
   imgIndex = document.querySelector(`.imgBox > img:nth-child(${i})`);
   sliderMark = document.querySelector(`.slider > div:nth-child(${i})`);
 
-  // 새 이미지와 슬라이더 마크에클래스 추가
+  // 새 이미지와 슬라이더 마크에 클래스 추가
   imgIndex.classList.add("showImg");
   sliderMark.classList.add("mark");
 }
-showInterval();
-setInterval(showInterval, 3000);
 
-//TOP버튼 클릭시 상단 이동
+slideInterval = setInterval(showInterval, 3000);
+
+//슬라이드 정지버튼 누를시
+let stopBtn = document.querySelector(".slider > div:last-child");
+let stopToggle = true;
+
+stopBtn.addEventListener("click", function () {
+  //슬라이드 정지
+  if (stopToggle) {
+    stopBtn.innerHTML = `<i class="fa-regular fa-circle-play"></i>`;
+    clearInterval(slideInterval);
+    stopToggle = false;
+
+    //슬라이드 재할당
+  } else {
+    stopBtn.innerHTML = `<i class="fa-regular fa-circle-pause"></i>`;
+    slideInterval = setInterval(showInterval, 3000);
+    stopToggle = true;
+  }
+});
+
+// TOP버튼 클릭시 상단 이동, fixBar 이동
 let topBtn = document.querySelector(".topBtn");
+let fixBar = document.querySelector(".fixBar");
 
 topBtn.addEventListener("click", () => {
-  //동작을 부드럽게
+  // 동작을 부드럽게
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
@@ -58,5 +79,13 @@ window.addEventListener("scroll", (e) => {
     // 스크롤 위치가 100 이하일 경우 TOP 버튼 숨김
     topBtn.style.bottom = "-100px";
     topBtn.style.transition = "bottom 0.5s ease-out";
+  }
+
+  //스크롤에 따라 fixBar 이동
+  if (scrollY < 200) {
+    fixBar.style.top = "160px";
+  } else {
+    fixBar.style.top = scrollY + 160 + "px";
+    fixBar.style.transition = "top 0.2s ease-out";
   }
 });

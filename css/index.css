@@ -273,9 +273,6 @@ main article .eventSlide .exhibit .dots div:first-child {
   background-color: #666;
 }
 main article .eventSlide .exhibit .dots div:last-child {
-  background: 0;
-  border: 1px solid #888;
-  border-radius: 4px;
   width: 20px;
   height: 20px;
   display: flex;
@@ -525,6 +522,7 @@ main article.introduce {
   height: 500px;
   background: url("../img/greenBg.jpg") no-repeat;
   background-size: 100% 260px;
+  z-index: -1;
 }
 main article.introduce .title {
   color: white;
@@ -552,7 +550,7 @@ main article.introduce .placeContainer .right {
   transform: translateY(-50%);
 }
 main article.introduce .placeContainer .placeWrap {
-  width: 70%;
+  width: 60%;
   display: flex;
   overflow: hidden;
   gap: 8px;
@@ -560,27 +558,58 @@ main article.introduce .placeContainer .placeWrap {
 main article.introduce .placeContainer .placeWrap .place {
   width: 32%;
   position: relative;
-  z-index: 3;
   margin-right: 2%;
+  box-shadow: 0 -20px 100px -2px inset;
 }
 main article.introduce .placeContainer .placeWrap .place:last-child {
   margin-right: 0;
 }
 main article.introduce .placeContainer .placeWrap .place img {
-  z-index: 0;
+  position: relative;
+  z-index: -1;
 }
 main article.introduce .placeContainer .placeWrap .place dl {
   color: white;
   position: absolute;
-  bottom: 12px;
+  bottom: 16px;
   height: 50px;
   width: 100%;
-  padding: 0 16px;
+  padding: 0 20px;
 }
 main article.introduce .placeContainer .placeWrap .place dl dt {
   padding-top: 8px;
   font-weight: 900;
   font-size: 24px;
+}
+main .fixBar {
+  position: absolute;
+  top: 120px;
+  right: 7%;
+  box-shadow: 4px 6px 18px -3px gray;
+  border-radius: 10px;
+  z-index: 100;
+  background-color: white;
+}
+main .fixBar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 16px 0 16px;
+  position: relative;
+  border-top: 1px solid #999;
+  margin: 0 12px 36px 12px;
+}
+main .fixBar li:first-child {
+  border-top: 0;
+}
+main .fixBar li a {
+  position: absolute;
+  padding-top: 36px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  bottom: -20px;
+  color: #444;
 }
 main .topBtn {
   position: fixed;
@@ -595,6 +624,7 @@ main .topBtn {
   font-size: 0.74rem;
   font-weight: 700;
   transition: top 1s ease-out;
+  z-index: 100;
 }
 main .topBtn i {
   position: relative;

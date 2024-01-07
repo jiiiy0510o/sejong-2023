@@ -277,9 +277,6 @@ main {
               background-color: #666;
             }
             &:last-child {
-              background: 0;
-              border: 1px solid #888;
-              border-radius: 4px;
               width: 20px;
               height: 20px;
               display: flex;
@@ -541,6 +538,7 @@ main {
       height: 500px;
       background: url("../img/greenBg.jpg") no-repeat;
       background-size: 100% 260px;
+      z-index: -1;
       .title {
         color: white;
         width: 70%;
@@ -566,28 +564,29 @@ main {
           transform: translateY(-50%);
         }
         .placeWrap {
-          width: 70%;
+          width: 60%;
           display: flex;
           overflow: hidden;
           gap: 8px;
           .place {
             width: 32%;
             position: relative;
-            z-index: 3;
             margin-right: 2%;
+            box-shadow: 0 -20px 100px -2px inset;
             &:last-child {
               margin-right: 0;
             }
             img {
-              z-index: 0;
+              position: relative;
+              z-index: -1;
             }
             dl {
               color: white;
               position: absolute;
-              bottom: 12px;
+              bottom: 16px;
               height: 50px;
               width: 100%;
-              padding: 0 16px;
+              padding: 0 20px;
               dt {
                 padding-top: 8px;
                 font-weight: 900;
@@ -596,6 +595,36 @@ main {
             }
           }
         }
+      }
+    }
+  }
+  .fixBar {
+    position: absolute;
+    top: 120px;
+    right: 7%;
+    box-shadow: 4px 6px 18px -3px gray;
+    border-radius: 10px;
+    z-index: 100;
+    background-color: white;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px 16px 0 16px;
+      position: relative;
+      border-top: 1px solid #999;
+      margin: 0 12px 36px 12px;
+      &:first-child {
+        border-top: 0;
+      }
+      a {
+        position: absolute;
+        padding-top: 36px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        bottom: -20px;
+        color: #444;
       }
     }
   }
@@ -612,6 +641,7 @@ main {
     font-size: 0.74rem;
     font-weight: 700;
     transition: top 1s ease-out;
+    z-index: 100;
     i {
       position: relative;
       top: -4px;
