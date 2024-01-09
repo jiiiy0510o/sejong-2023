@@ -64,14 +64,13 @@ header .nation img {
 
 .showNav {
   display: flex;
-  box-sizing: border-box;
   justify-content: center;
   position: relative;
   width: 100%;
   transition: height 3s ease-in-out;
 }
 .showNav > li {
-  width: 70%;
+  width: 72%;
   height: 0;
   padding-left: 160px;
   display: none;
@@ -93,7 +92,7 @@ header .nation img {
 }
 .showNav > li .listTitle {
   padding-left: 30%;
-  width: 70%;
+  width: 68%;
   display: flex;
   flex-wrap: wrap;
   gap: 48px 0;
@@ -233,7 +232,7 @@ main article .title .circle i {
 }
 main article .eventSlide {
   background-color: white;
-  width: 70%;
+  width: 68%;
   border-radius: 20px;
   position: absolute;
   clear: both;
@@ -264,24 +263,14 @@ main article .eventSlide .exhibit .dots {
 }
 main article .eventSlide .exhibit .dots div {
   margin-top: 12px;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: #bbb;
+  cursor: pointer;
 }
-main article .eventSlide .exhibit .dots div:first-child {
-  background-color: #666;
-}
-main article .eventSlide .exhibit .dots div:last-child {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main article .eventSlide .exhibit .dots div:last-child i {
-  font-size: 0.82rem;
-  color: #777;
+main article .eventSlide .exhibit .dots div.active {
+  background-color: #555;
 }
 main article .eventSlide .closure {
   width: 22%;
@@ -325,7 +314,7 @@ main article .eventSlide .closure .time b {
 main article .flexBoard {
   position: absolute;
   top: 372px;
-  width: 70%;
+  width: 68%;
   display: flex;
   justify-content: center;
 }
@@ -373,7 +362,7 @@ main article .flexBoard section .boardList .date span {
   color: #888;
 }
 main article .flexBoard section .boardList .memo {
-  width: 72%;
+  width: 68%;
   color: #777;
   overflow: hidden;
   white-space: nowrap;
@@ -385,7 +374,7 @@ main article.reserve {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 70%;
+  width: 68%;
   height: 350px;
   margin: 0 auto;
   gap: 12px;
@@ -446,6 +435,13 @@ main article.reserve .reserveBox li.btn:hover:after {
   z-index: -1;
   height: 100%;
 }
+main article.reserve .reserveBox li .icon {
+  display: inline-block;
+  width: 48px;
+  height: 64px;
+  padding-top: 24px;
+  font-size: 2.2rem;
+}
 main article.reserve .reserveBox:first-child {
   background-color: #d04a0b;
 }
@@ -460,10 +456,6 @@ main article.reserve .reserveBox:nth-child(2) .btn:hover {
 }
 main article.reserve .reserveBox:nth-child(3) {
   background-color: #5ca52a;
-}
-main article.reserve .reserveBox:nth-child(3) i {
-  color: white;
-  font-size: 36px;
 }
 main article.reserve .reserveBox:nth-child(3) .btn:hover {
   color: #5ca52a;
@@ -490,10 +482,6 @@ main article.reserve .reserveBox:nth-child(4) .btn:hover:after {
 }
 main article.reserve .reserveBox:nth-child(5) {
   background-color: #4c86a9;
-}
-main article.reserve .reserveBox:nth-child(5) i {
-  color: white;
-  font-size: 36px;
 }
 main article.reserve .reserveBox:nth-child(5) .btn:hover {
   color: #4c86a9;
@@ -526,7 +514,7 @@ main article.introduce {
 }
 main article.introduce .title {
   color: white;
-  width: 70%;
+  width: 68%;
   height: 88px;
 }
 main article.introduce .title span {
@@ -541,24 +529,27 @@ main article.introduce .placeContainer {
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 main article.introduce .placeContainer .left,
 main article.introduce .placeContainer .right {
-  color: red;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  top: -24px;
+  font-size: 2.6rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 2%;
 }
 main article.introduce .placeContainer .placeWrap {
-  width: 60%;
+  width: 1060px;
   display: flex;
   overflow: hidden;
   gap: 8px;
 }
 main article.introduce .placeContainer .placeWrap .place {
-  width: 32%;
+  width: 100%;
   position: relative;
-  margin-right: 2%;
   box-shadow: 0 -20px 100px -2px inset;
 }
 main article.introduce .placeContainer .placeWrap .place:last-child {
@@ -583,8 +574,9 @@ main article.introduce .placeContainer .placeWrap .place dl dt {
 }
 main .fixBar {
   position: absolute;
-  top: 120px;
-  right: 7%;
+  top: 100px;
+  right: 6.4%;
+  width: 96px;
   box-shadow: 4px 6px 18px -3px gray;
   border-radius: 10px;
   z-index: 100;
@@ -644,7 +636,7 @@ footer ul {
   align-items: center;
   border-bottom: 1px solid #999;
   padding-left: 10%;
-  color: #ccc;
+  color: #fff;
 }
 footer ul li {
   padding-right: 16px;
@@ -689,4 +681,23 @@ footer .footerInfo div:last-child {
 }
 footer .footerInfo div:last-child img {
   height: 60px;
+}
+
+@media screen and (max-width: 1400px) {
+  main article .eventSlide,
+  main article .flexBoard {
+    width: 90%;
+  }
+  main article.reserve {
+    width: 90%;
+  }
+  main article.introduce .title {
+    width: 90%;
+  }
+  main article.introduce .placeContainer {
+    justify-content: space-between;
+  }
+  main article.introduce .placeContainer .placeWrap {
+    width: 1060px;
+  }
 }

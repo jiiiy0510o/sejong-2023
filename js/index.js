@@ -61,17 +61,26 @@ stopBtn.addEventListener("click", function () {
   }
 });
 
+//이벤트 행사 슬라이드
+let dot = document.querySelector(".dots div");
+
+dot.addEventListener("click", function () {
+  console.log("clicked!!");
+  dot.classList.add("active");
+});
+
 // TOP버튼 클릭시 상단 이동, fixBar 이동
 let topBtn = document.querySelector(".topBtn");
 let fixBar = document.querySelector(".fixBar");
 
 topBtn.addEventListener("click", () => {
-  // 동작을 부드럽게
+  //동작을 부드럽게
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 window.addEventListener("scroll", (e) => {
   let scrollY = this.scrollY;
+  let bodyHeight = document.querySelector("body").scrollHeight;
   if (scrollY > 100) {
     topBtn.style.bottom = "40%";
     topBtn.style.transition = "bottom 0.5s ease-out";
@@ -81,11 +90,58 @@ window.addEventListener("scroll", (e) => {
     topBtn.style.transition = "bottom 0.5s ease-out";
   }
 
-  //스크롤에 따라 fixBar 이동
+  //스크롤에 따라 fixBar 높이 이동
   if (scrollY < 200) {
-    fixBar.style.top = "160px";
-  } else {
-    fixBar.style.top = scrollY + 160 + "px";
+    fixBar.style.top = "100px";
+    //하단 스크롤 고정
+  } else if (scrollY >= 200 && scrollY <= 2200) {
+    fixBar.style.top = scrollY + 20 + "px";
     fixBar.style.transition = "top 0.2s ease-out";
   }
 });
+
+//리사이즈 될 경우 fixBar 오른쪽으로 이동
+let widthSize = window.innerWidth;
+let leftPosition = fixBar.offsetLeft;
+console.log(leftPosition);
+window.addEventListener("resize", function () {
+  console.log(widthSize);
+  if (widthSize > 1300) {
+    fixBar.style.left = leftPosition + (widthSize - window.innerWidth) + "px";
+  } else if (widthSize <= 1300 && widthSize < 1920) {
+    // 1300 이하이면, left 속성 초기화
+    fixBar.style.left = "";
+  }
+});
+
+//날씨정보받아서 아이콘으로 변경
+const API_KEY = "257f4e6c8fc561a25d61cb3c90b41002";
+
+function onGeoOk(position) {
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+  fetch(url).then((response) =>
+    response.json().then((data) => {
+      const weather = document.querySelector(".weather span");
+      let sky = data.weather[0].main;
+      //날씨별로 ICON변경
+      if (sky == "Clouds") {
+        weather.innerHTML = `<i class="fa-solid fa-cloud"></i>`;
+      } else if (sky == "Wind") {
+        weather.innerHTML = `<i class="fa-solid fa-wind"></i>`;
+      } else if (sky == "Clear") {
+        weather.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+      } else if (sky == "Rain") {
+        weather.innerHTML = `<i class="fa-solid fa-cloud-rain"></i>`;
+      } else if (sky == "Snow") {
+        weather.innerHTML = `<i class="fa-solid fa-snowflake"></i>`;
+      }
+    })
+  );
+}
+//에러날시 경고창
+function onGeoError() {
+  alert("Can't find you. No weather for you");
+}
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
