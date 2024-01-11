@@ -245,7 +245,7 @@ main {
       top: -100px;
       display: flex;
       align-items: flex-start;
-      gap: 20px;
+      gap: 24px;
       z-index: 3;
       padding: 4px 24px;
 
@@ -256,8 +256,11 @@ main {
           display: flex;
           gap: 8px;
           overflow: hidden;
+
           img {
+            position: relative;
             width: 24.4%;
+            transition: left 0.3s ease-in-out;
           }
         }
         .dots {
@@ -273,7 +276,7 @@ main {
             border-radius: 50%;
             background-color: #bbb;
             cursor: pointer;
-            &.active {
+            &:first-child {
               background-color: #555;
             }
           }
@@ -293,7 +296,8 @@ main {
           }
         }
         ul {
-          padding: 8px 0 136px 0;
+          padding-top: 8px;
+          padding-bottom: 96px;
           border-left: 1px solid #ddd;
           border-right: 1px solid #ddd;
           li {
@@ -305,7 +309,7 @@ main {
           color: white;
           font-size: 1.1rem;
           padding: 8px 0;
-          b {
+          strong {
             color: #cdfd76;
           }
         }
@@ -726,5 +730,14 @@ footer {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .imgBox {
+    height: 600px !important;
+  }
+  .day {
+    padding: 8px 0 102px 0 !important;
   }
 }

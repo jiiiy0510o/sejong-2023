@@ -61,14 +61,6 @@ stopBtn.addEventListener("click", function () {
   }
 });
 
-//이벤트 행사 슬라이드
-let dot = document.querySelector(".dots div");
-
-dot.addEventListener("click", function () {
-  console.log("clicked!!");
-  dot.classList.add("active");
-});
-
 // TOP버튼 클릭시 상단 이동, fixBar 이동
 let topBtn = document.querySelector(".topBtn");
 let fixBar = document.querySelector(".fixBar");
@@ -103,9 +95,8 @@ window.addEventListener("scroll", (e) => {
 //리사이즈 될 경우 fixBar 오른쪽으로 이동
 let widthSize = window.innerWidth;
 let leftPosition = fixBar.offsetLeft;
-console.log(leftPosition);
+
 window.addEventListener("resize", function () {
-  console.log(widthSize);
   if (widthSize > 1300) {
     fixBar.style.left = leftPosition + (widthSize - window.innerWidth) + "px";
   } else if (widthSize <= 1300 && widthSize < 1920) {
@@ -145,3 +136,29 @@ function onGeoError() {
   alert("Can't find you. No weather for you");
 }
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+
+//miniSlide .dots div클릭시 동작
+let dots = document.querySelectorAll(".dots div");
+let miniImg = document.querySelectorAll(".miniSlide img");
+
+dots.forEach(function (dot, index) {
+  dot.addEventListener("click", function () {
+    let leftValue = -25 * index; //24.4에 패딩포함
+    miniImg.forEach(function (img) {
+      img.style.left = leftValue + "%";
+    });
+
+    dots.forEach(function (dot) {
+      dot.style.backgroundColor = "#bbb"; // 모든 div의 색상 초기화
+    });
+    this.style.backgroundColor = "#555"; // 클릭시 색상 변경
+  });
+});
+
+let leftBtn = document.querySelector(".left");
+let rightBtn = document.querySelector(".right");
+let placeWrap = document.querySelectorAll(".placeWrap .place");
+
+leftBtn.addEventListener("click", function () {});
+
+rightBtn.addEventListener("click", function () {});

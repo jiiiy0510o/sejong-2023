@@ -239,7 +239,7 @@ main article .eventSlide {
   top: -100px;
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 24px;
   z-index: 3;
   padding: 4px 24px;
 }
@@ -252,7 +252,9 @@ main article .eventSlide .exhibit .miniSlide {
   overflow: hidden;
 }
 main article .eventSlide .exhibit .miniSlide img {
+  position: relative;
   width: 24.4%;
+  transition: left 0.3s ease-in-out;
 }
 main article .eventSlide .exhibit .dots {
   display: flex;
@@ -269,7 +271,7 @@ main article .eventSlide .exhibit .dots div {
   background-color: #bbb;
   cursor: pointer;
 }
-main article .eventSlide .exhibit .dots div.active {
+main article .eventSlide .exhibit .dots div:first-child {
   background-color: #555;
 }
 main article .eventSlide .closure {
@@ -286,7 +288,8 @@ main article .eventSlide .closure div:first-child {
   border: 0;
 }
 main article .eventSlide .closure ul {
-  padding: 8px 0 136px 0;
+  padding-top: 8px;
+  padding-bottom: 96px;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
 }
@@ -299,7 +302,7 @@ main article .eventSlide .closure .month {
   font-size: 1.1rem;
   padding: 8px 0;
 }
-main article .eventSlide .closure .month b {
+main article .eventSlide .closure .month strong {
   color: #cdfd76;
 }
 main article .eventSlide .closure .time {
@@ -699,5 +702,13 @@ footer .footerInfo div:last-child img {
   }
   main article.introduce .placeContainer .placeWrap {
     width: 1060px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .imgBox {
+    height: 600px !important;
+  }
+  .day {
+    padding: 8px 0 102px 0 !important;
   }
 }
