@@ -182,11 +182,8 @@ main .imgSlide .imgBox img.showImg {
 }
 main article {
   position: relative;
-  width: 100%;
-  height: 720px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
 }
 main article .title {
   height: 60px;
@@ -232,10 +229,8 @@ main article .title .circle i {
 }
 main article .eventSlide {
   background-color: white;
-  width: 68%;
   border-radius: 20px;
-  position: absolute;
-  clear: both;
+  position: relative;
   top: -100px;
   display: flex;
   align-items: flex-start;
@@ -244,7 +239,7 @@ main article .eventSlide {
   padding: 4px 24px;
 }
 main article .eventSlide .exhibit {
-  width: 78%;
+  width: 900px;
 }
 main article .eventSlide .exhibit .miniSlide {
   display: flex;
@@ -253,7 +248,7 @@ main article .eventSlide .exhibit .miniSlide {
 }
 main article .eventSlide .exhibit .miniSlide img {
   position: relative;
-  width: 24.4%;
+  height: 294px;
   transition: left 0.3s ease-in-out;
 }
 main article .eventSlide .exhibit .dots {
@@ -275,11 +270,8 @@ main article .eventSlide .exhibit .dots div:first-child {
   background-color: #555;
 }
 main article .eventSlide .closure {
-  width: 22%;
+  width: 300px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
 }
 main article .eventSlide .closure div {
   border: 1px solid #ddd;
@@ -288,8 +280,8 @@ main article .eventSlide .closure div:first-child {
   border: 0;
 }
 main article .eventSlide .closure ul {
+  height: 248px;
   padding-top: 8px;
-  padding-bottom: 96px;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
 }
@@ -307,7 +299,7 @@ main article .eventSlide .closure .month strong {
 }
 main article .eventSlide .closure .time {
   padding: 4px 0;
-  font-size: 0.874rem;
+  font-size: 0.87rem;
   line-height: 1.2rem;
   background-color: #ffbe0c;
 }
@@ -315,9 +307,6 @@ main article .eventSlide .closure .time b {
   margin-right: 8px;
 }
 main article .flexBoard {
-  position: absolute;
-  top: 372px;
-  width: 68%;
   display: flex;
   justify-content: center;
 }
@@ -365,7 +354,6 @@ main article .flexBoard section .boardList .date span {
   color: #888;
 }
 main article .flexBoard section .boardList .memo {
-  width: 68%;
   color: #777;
   overflow: hidden;
   white-space: nowrap;
@@ -377,11 +365,11 @@ main article.reserve {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 68%;
+  width: 1200px;
   height: 350px;
   margin: 0 auto;
   gap: 12px;
-  padding: 50px 0;
+  padding: 100px 0;
 }
 main article.reserve .reserveBox {
   color: white;
@@ -510,6 +498,7 @@ main article.reserve .reserveBox:last-child .btn:hover:after {
   background-color: #333;
 }
 main article.introduce {
+  width: 100%;
   height: 500px;
   background: url("../img/greenBg.jpg") no-repeat;
   background-size: 100% 260px;
@@ -517,7 +506,8 @@ main article.introduce {
 }
 main article.introduce .title {
   color: white;
-  width: 68%;
+  margin: 0 auto;
+  width: 1200px;
   height: 88px;
 }
 main article.introduce .title span {
@@ -686,29 +676,25 @@ footer .footerInfo div:last-child img {
   height: 60px;
 }
 
-@media screen and (max-width: 1400px) {
-  main article .eventSlide,
-  main article .flexBoard {
-    width: 90%;
-  }
-  main article.reserve {
-    width: 90%;
-  }
-  main article.introduce .title {
-    width: 90%;
-  }
-  main article.introduce .placeContainer {
-    justify-content: space-between;
-  }
-  main article.introduce .placeContainer .placeWrap {
-    width: 1060px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .imgBox {
+@media screen and (max-width: 1199px) {
+  .main .imgBox {
     height: 600px !important;
   }
-  .day {
-    padding: 8px 0 102px 0 !important;
+  .main article {
+    width: 90% !important;
+  }
+  .main article .eventSlide {
+    margin: 0 auto;
+    width: 83.6% !important;
+    flex-wrap: wrap;
+  }
+  .main article .eventSlide .exhibit {
+    width: 100% !important;
+  }
+  .main article .eventSlide .exhibit img {
+    height: 328px !important;
+  }
+  .main article .eventSlide .closure {
+    width: 100% !important;
   }
 }

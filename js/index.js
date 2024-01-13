@@ -1,3 +1,7 @@
+//헤더, 푸더 로드
+$("header").load("header.html");
+$("footer").load("footer.html");
+
 //헤더네비
 let headerNav = document.querySelectorAll("header ul > li > a");
 let showNav = document.querySelector(".showNav");

@@ -186,11 +186,8 @@ main {
   }
   article {
     position: relative;
-    width: 100%;
-    height: 720px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
     .title {
       height: 60px;
       padding: 8px 0;
@@ -238,10 +235,8 @@ main {
 
     .eventSlide {
       background-color: white;
-      width: 68%;
       border-radius: 20px;
-      position: absolute;
-      clear: both;
+      position: relative;
       top: -100px;
       display: flex;
       align-items: flex-start;
@@ -250,7 +245,7 @@ main {
       padding: 4px 24px;
 
       .exhibit {
-        width: 78%;
+        width: 900px;
 
         .miniSlide {
           display: flex;
@@ -259,7 +254,7 @@ main {
 
           img {
             position: relative;
-            width: 24.4%;
+            height: 294px;
             transition: left 0.3s ease-in-out;
           }
         }
@@ -283,11 +278,8 @@ main {
         }
       }
       .closure {
-        width: 22%;
+        width: 300px;
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
 
         div {
           border: 1px solid #ddd;
@@ -296,8 +288,8 @@ main {
           }
         }
         ul {
+          height: 248px;
           padding-top: 8px;
-          padding-bottom: 96px;
           border-left: 1px solid #ddd;
           border-right: 1px solid #ddd;
           li {
@@ -315,7 +307,7 @@ main {
         }
         .time {
           padding: 4px 0;
-          font-size: 0.874rem;
+          font-size: 0.87rem;
           line-height: 1.2rem;
           background-color: #ffbe0c;
           b {
@@ -325,11 +317,9 @@ main {
       }
     }
     .flexBoard {
-      position: absolute;
-      top: 372px;
-      width: 68%;
       display: flex;
       justify-content: center;
+
       section {
         width: 49%;
         border-bottom: 1px solid #ddd;
@@ -372,7 +362,6 @@ main {
             }
           }
           .memo {
-            width: 68%;
             color: #777;
             overflow: hidden;
             white-space: nowrap;
@@ -387,11 +376,11 @@ main {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      width: 68%;
+      width: 1200px;
       height: 350px;
       margin: 0 auto;
       gap: 12px;
-      padding: 50px 0;
+      padding: 100px 0;
       .reserveBox {
         color: white;
         border-radius: 2px;
@@ -528,13 +517,15 @@ main {
       }
     }
     &.introduce {
+      width: 100%;
       height: 500px;
       background: url("../img/greenBg.jpg") no-repeat;
       background-size: 100% 260px;
       z-index: -1;
       .title {
         color: white;
-        width: 68%;
+        margin: 0 auto;
+        width: 1200px;
         height: 88px;
         span {
           color: inherit;
@@ -708,36 +699,28 @@ footer {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  main {
+@media screen and (max-width: 1199px) {
+  //가로 해상도가 1200px 미만인 화면에 적용
+  .main {
+    .imgBox {
+      height: 600px !important;
+    }
     article {
-      .eventSlide,
-      .flexBoard {
-        width: 90%;
-      }
-      &.reserve {
-        width: 90%;
-      }
-      &.introduce {
-        .title {
-          width: 90%;
-        }
-        .placeContainer {
-          justify-content: space-between;
-          .placeWrap {
-            width: 1060px;
+      width: 90% !important;
+      .eventSlide {
+        margin: 0 auto;
+        width: 83.6% !important;
+        flex-wrap: wrap;
+        .exhibit {
+          width: 100% !important;
+          img {
+            height: 328px !important;
           }
+        }
+        .closure {
+          width: 100% !important;
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .imgBox {
-    height: 600px !important;
-  }
-  .day {
-    padding: 8px 0 102px 0 !important;
   }
 }
