@@ -1,0 +1,19 @@
+header + nav {
+  width: 80%;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  .home,
+  select,
+  .share {
+    padding: 12px;
+    border-left: 1px solid #ddd;
+  }
+  .share {
+    position: absolute;
+    right: 0;
+  }
+}
+.fixBar {
+  display: none;
+}

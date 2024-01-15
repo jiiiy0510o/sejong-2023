@@ -1,0 +1,182 @@
+body {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+}
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 200;
+  position: relative;
+}
+body header nav {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  padding-right: 88px;
+  height: 80px;
+}
+body header nav ul {
+  display: flex;
+  align-items: center;
+}
+body header nav ul li {
+  font-weight: 900;
+  padding: 16px 12px;
+  position: relative;
+  cursor: pointer;
+}
+body header nav ul li:after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  background-color: #299a52;
+  transform: scaleX(0);
+  transition: 0.3s ease-in-out;
+}
+body header nav ul li:hover:after {
+  transform: scaleX(1);
+}
+body header nav ul li ul {
+  position: absolute;
+  bottom: -100px;
+  z-index: 100;
+}
+body header .nation {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  position: relative;
+  margin-top: 2px;
+}
+body header .nation img {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  width: 30px;
+}
+body .fixBar {
+  position: absolute;
+  top: 100px;
+  right: 6.4%;
+  width: 96px;
+  box-shadow: 4px 6px 18px -3px gray;
+  border-radius: 10px;
+  z-index: 100;
+  background-color: white;
+}
+body .fixBar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 16px 0 16px;
+  position: relative;
+  border-top: 1px solid #999;
+  margin: 0 12px 36px 12px;
+}
+body .fixBar li:first-child {
+  border-top: 0;
+}
+body .fixBar li a {
+  position: absolute;
+  padding-top: 36px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  bottom: -20px;
+  color: #444;
+}
+body .topBtn {
+  position: fixed;
+  bottom: -100px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 0;
+  background-color: black;
+  color: white;
+  font-size: 0.74rem;
+  font-weight: 700;
+  transition: top 1s ease-out;
+  z-index: 100;
+}
+body .topBtn i {
+  position: relative;
+  top: -4px;
+  font-size: 0.6em;
+}
+body footer {
+  width: 100%;
+  background-color: #444;
+  position: relative;
+  font-size: 0.8rem;
+  bottom: 0;
+}
+body footer ul {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  border-bottom: 1px solid #999;
+  padding-left: 10%;
+  color: #fff;
+}
+body footer ul li {
+  padding-right: 16px;
+  font-weight: 900;
+}
+body footer ul li a {
+  padding: 12px 0;
+}
+body footer ul.sns {
+  position: absolute;
+  border-bottom: 0;
+  top: 0px;
+  right: 16%;
+  font-size: 1.1rem;
+}
+body footer ul.sns li {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 100%;
+  border-right: 1px solid #999;
+}
+body footer ul.sns li:first-child {
+  border-left: 1px solid #999;
+}
+body footer .footerInfo {
+  color: #ccc;
+  padding: 0 10%;
+  position: relative;
+  line-height: 1.3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 116px;
+}
+body footer .footerInfo div:nth-child(2) {
+  padding-left: 36px;
+}
+body footer .footerInfo div:last-child {
+  position: absolute;
+  right: 10%;
+}
+body footer .footerInfo div:last-child img {
+  height: 60px;
+}

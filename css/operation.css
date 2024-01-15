@@ -1,0 +1,20 @@
+header + nav {
+  width: 80%;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+header + nav .home,
+header + nav select,
+header + nav .share {
+  padding: 12px;
+  border-left: 1px solid #ddd;
+}
+header + nav .share {
+  position: absolute;
+  right: 0;
+}
+
+.fixBar {
+  display: none;
+}
