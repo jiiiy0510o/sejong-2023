@@ -1,20 +1,85 @@
 header + nav {
-  width: 80%;
+  width: 76%;
   display: flex;
   position: relative;
   border-bottom: 1px solid #ddd;
+  padding: 0 12%;
+  height: 52px;
+}
+header + nav select {
+  appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 168px;
+  position: relative;
+}
+header + nav select:after {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  content: "";
+  background: url("/img/icon/down.png") no-repeat;
+  margin-right: 10px;
+}
+header + nav .share {
+  position: absolute;
+  right: 12%;
+  top: 0;
+  height: 30px;
+}
+header + nav .home,
+header + nav .share {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #ddd;
 }
 header + nav .home,
 header + nav select,
 header + nav .share {
   padding: 12px;
-  border-left: 1px solid #ddd;
-}
-header + nav .share {
-  position: absolute;
-  right: 0;
+  border-right: 1px solid #ddd;
 }
 
+main .contents {
+  width: 80%;
+  margin: 0 auto;
+}
+main .contents .title {
+  padding: 32px 0;
+  text-align: center;
+  line-height: 2rem;
+}
+main .contents .wrap ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+main .contents .wrap ul h1 {
+  width: 100%;
+  padding-bottom: 16px;
+}
+main .contents .wrap ul li {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 48px;
+  padding: 12px 32px;
+  border: 1px solid #ddd;
+  margin: 8px 12px;
+  font-size: 0.96rem;
+  line-height: 1.28rem;
+  color: #777;
+  font-weight: 600;
+}
+main .contents .wrap ul h4 {
+  color: red;
+  padding-top: 16px;
+  font-size: 0.9rem;
+}
 .fixBar {
   display: none;
 }
