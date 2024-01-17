@@ -43,7 +43,7 @@ header + nav .share {
 }
 
 main .contents {
-  width: 80%;
+  width: 76%;
   margin: 0 auto;
 }
 main .contents .title {
@@ -51,16 +51,121 @@ main .contents .title {
   text-align: center;
   line-height: 2rem;
 }
-main .contents .wrap ul {
+main .contents .wrap h2 {
+  width: 100%;
+  font-size: 900;
+  margin-bottom: 16px;
+}
+main .contents .wrap table {
+  width: 100%;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 1.4rem;
+}
+main .contents .wrap table tr th,
+main .contents .wrap table tr td {
+  border: 1px solid #ddd;
+  padding: 16px 0;
+}
+main .contents .wrap table tr th {
+  background-color: #eee;
+  font-weight: 700;
+}
+main .contents .wrap table tr td {
+  font-weight: 500;
+}
+main .contents .wrap table tr:first-child {
+  border-top: 2px solid #4db83e;
+}
+main .contents .wrap .redLine {
+  color: red;
+  padding-top: 16px;
+  font-size: 0.9rem;
+}
+main .contents .wrap > * {
+  padding: 32px 0 50px 0;
+}
+main .contents .wrap .bgArea {
+  height: 320px;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+main .contents .wrap .bgArea ul {
+  width: 320px;
+  height: 320px;
+  border: 1px solid #ddd;
+  margin: 0 24px;
+}
+main .contents .wrap .bgArea ul li:first-child {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #777;
+}
+main .contents .wrap .prohibit {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .contents .wrap .prohibit li {
+  width: 684px;
+  display: flex;
+  align-items: center;
+  margin: 16px;
+  line-height: 1.5rem;
+}
+main .contents .wrap .prohibit li img {
+  width: 80px;
+  height: 80px;
+}
+main .contents .wrap .prohibit li .banText {
+  width: 72%;
+  padding-left: 16px;
+}
+main .contents .wrap .prohibit li .banText h4 {
+  font-weight: 900;
+}
+main .contents .wrap .prohibit li .banText h5 {
+  font-weight: 700;
+}
+main .contents .wrap .fare .iconList {
+  display: flex;
+  padding: 48px 0;
+}
+main .contents .wrap .fare .iconList li {
+  width: 500px;
+  margin: 0 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.4rem;
+  background: url("/img/topBorder.gif") no-repeat center top;
+}
+main .contents .wrap .fare .iconList li .desc {
+  padding-top: 32px;
+}
+main .contents .wrap .fare .text li {
+  text-decoration: dotted;
+  line-height: 1.6rem;
+}
+main .contents .wrap .membership,
+main .contents .wrap .notice,
+main .contents .wrap .benefit {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-main .contents .wrap ul h1 {
+main .contents .wrap .membership h2,
+main .contents .wrap .notice h2,
+main .contents .wrap .benefit h2 {
   width: 100%;
   padding-bottom: 16px;
 }
-main .contents .wrap ul li {
+main .contents .wrap .membership li,
+main .contents .wrap .notice li,
+main .contents .wrap .benefit li {
   text-align: center;
   display: flex;
   align-items: center;
@@ -68,18 +173,10 @@ main .contents .wrap ul li {
   width: 600px;
   height: 48px;
   padding: 12px 32px;
-  border: 1px solid #ddd;
   margin: 8px 12px;
+  border: 1px solid #ddd;
   font-size: 0.96rem;
   line-height: 1.28rem;
   color: #777;
   font-weight: 600;
-}
-main .contents .wrap ul h4 {
-  color: red;
-  padding-top: 16px;
-  font-size: 0.9rem;
-}
-.fixBar {
-  display: none;
 }

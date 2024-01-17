@@ -45,7 +45,7 @@ header + nav {
 }
 main {
   .contents {
-    width: 80%;
+    width: 76%;
     margin: 0 auto;
     .title {
       padding: 32px 0;
@@ -53,11 +53,124 @@ main {
       line-height: 2rem;
     }
     .wrap {
-      ul {
+      h2 {
+        width: 100%;
+        font-size: 900;
+        margin-bottom: 16px;
+      }
+      table {
+        width: 100%;
+        border: 1px solid #ddd;
+        text-align: center;
+        line-height: 1.4rem;
+        tr {
+          th,
+          td {
+            border: 1px solid #ddd;
+            padding: 16px 0;
+          }
+          th {
+            background-color: #eee;
+            font-weight: 700;
+          }
+          td {
+            font-weight: 500;
+          }
+          &:first-child {
+            border-top: 2px solid #4db83e;
+          }
+        }
+      }
+
+      .redLine {
+        color: red;
+        padding-top: 16px;
+        font-size: 0.9rem;
+      }
+      > * {
+        padding: 32px 0 50px 0;
+      }
+      .bgArea {
+        height: 320px;
+        padding: 100px 0;
+        display: flex;
+        justify-content: center;
+        ul {
+          width: 320px;
+          height: 320px;
+          border: 1px solid #ddd;
+          margin: 0 24px;
+          li {
+            &:first-child {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background-color: #777;
+            }
+          }
+        }
+      }
+      .prohibit {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 684px;
+          display: flex;
+          align-items: center;
+          margin: 16px;
+          line-height: 1.5rem;
+          img {
+            width: 80px;
+            height: 80px;
+          }
+          .banText {
+            width: 72%;
+            padding-left: 16px;
+            h4 {
+              font-weight: 900;
+            }
+            h5 {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+      .notice {
+      }
+      .fare {
+        .iconList {
+          display: flex;
+          padding: 48px 0;
+
+          li {
+            width: 500px;
+            margin: 0 12px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            line-height: 1.4rem;
+            background: url("/img/topBorder.gif") no-repeat center top;
+            .desc {
+              padding-top: 32px;
+            }
+          }
+        }
+        .text {
+          li {
+            text-decoration: dotted;
+            line-height: 1.6rem;
+          }
+        }
+      }
+      .membership,
+      .notice,
+      .benefit {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        h1 {
+        h2 {
           width: 100%;
           padding-bottom: 16px;
         }
@@ -69,24 +182,14 @@ main {
           width: 600px;
           height: 48px;
           padding: 12px 32px;
-          border: 1px solid #ddd;
           margin: 8px 12px;
+          border: 1px solid #ddd;
           font-size: 0.96rem;
           line-height: 1.28rem;
           color: #777;
           font-weight: 600;
         }
-        h4 {
-          color: red;
-          padding-top: 16px;
-          font-size: 0.9rem;
-        }
-      }
-      table {
       }
     }
   }
-}
-.fixBar {
-  display: none;
 }
