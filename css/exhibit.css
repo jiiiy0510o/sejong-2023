@@ -1,0 +1,8 @@
+main .ingExhibit .exhibitInfo,
+main .endExhibit .exhibitInfo {
+  display: flex;
+}
+main .ingExhibit .exhibitInfo img,
+main .endExhibit .exhibitInfo img {
+  width: 300px;
+}

@@ -70,6 +70,79 @@ body header .nation img {
   top: 5px;
   width: 30px;
 }
+body header + nav {
+  width: 76%;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  padding: 0 12%;
+  height: 52px;
+}
+body header + nav select {
+  appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 168px;
+  position: relative;
+}
+body header + nav select:after {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  content: "";
+  background: url("/img/icon/down.png") no-repeat;
+  margin-right: 10px;
+}
+body header + nav .share {
+  position: absolute;
+  right: 12%;
+  top: 0;
+  height: 30px;
+}
+body header + nav .home,
+body header + nav .share {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #ddd;
+}
+body header + nav .home,
+body header + nav select,
+body header + nav .share {
+  padding: 12px;
+  border-right: 1px solid #ddd;
+}
+body main {
+  width: 76%;
+  margin: 0 auto;
+}
+body main .contents > .title {
+  padding: 60px 0;
+  text-align: center;
+  line-height: 2rem;
+}
+body main .contents > .title h1 {
+  color: #299a52;
+  font-weight: 900;
+  position: relative;
+}
+body main .contents > .title h1:before {
+  content: "";
+  display: block;
+  background: url("/img/zig-zag.png") no-repeat;
+  background-size: 100% 100%;
+  width: 40px;
+  height: 12px;
+  position: relative;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+body main .contents > .title h4 {
+  font-weight: 600;
+  padding: 24px 0;
+}
 body .fixBar {
   position: absolute;
   top: 100px;

@@ -1,57 +1,5 @@
-header + nav {
-  width: 76%;
-  display: flex;
-  position: relative;
-  border-bottom: 1px solid #ddd;
-  padding: 0 12%;
-  height: 52px;
-
-  select {
-    appearance: none;
-    -o-appearance: none; //구 오페라
-    -webkit-appearance: none; //크롬, 사파리, 오페라
-    -moz-appearance: none; //파이어폭스
-    border: none;
-    width: 168px;
-    position: relative;
-    &:after {
-      position: absolute;
-      top: 0;
-      display: inline-block;
-      content: "";
-      background: url("/img/icon/down.png") no-repeat;
-      margin-right: 10px;
-    }
-  }
-  .share {
-    position: absolute;
-    right: 12%;
-    top: 0;
-    height: 30px;
-  }
-  .home,
-  .share {
-    display: flex;
-    align-items: center;
-    border-left: 1px solid #ddd;
-  }
-
-  .home,
-  select,
-  .share {
-    padding: 12px;
-    border-right: 1px solid #ddd;
-  }
-}
 main {
   .contents {
-    width: 76%;
-    margin: 0 auto;
-    .title {
-      padding: 32px 0;
-      text-align: center;
-      line-height: 2rem;
-    }
     .wrap {
       h2 {
         width: 100%;
