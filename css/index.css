@@ -62,10 +62,6 @@
   box-shadow: 0 3px 8px -5px;
 }
 
-main {
-  position: relative;
-  width: 100%;
-}
 main .imgSlide {
   position: relative;
   overflow: hidden;
@@ -115,11 +111,6 @@ main .imgSlide .imgBox img.showImg {
   width: 100%;
   display: block;
   z-index: 3;
-}
-main article {
-  position: relative;
-  width: 1200px;
-  margin: 0 auto;
 }
 main article .title {
   height: 60px;

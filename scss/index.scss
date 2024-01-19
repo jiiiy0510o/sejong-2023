@@ -63,9 +63,6 @@
   }
 }
 main {
-  position: relative;
-  width: 100%;
-
   .imgSlide {
     position: relative;
     overflow: hidden;
@@ -119,9 +116,6 @@ main {
     }
   }
   article {
-    position: relative;
-    width: 1200px;
-    margin: 0 auto;
     .title {
       height: 60px;
       padding: 8px 0;
@@ -166,7 +160,6 @@ main {
         }
       }
     }
-
     .eventSlide {
       background-color: white;
       border-radius: 20px;

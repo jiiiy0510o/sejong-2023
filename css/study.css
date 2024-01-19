@@ -1,0 +1,11 @@
+.wrap {
+  display: flex;
+  gap: 8px;
+  flex-direction: wrap;
+}
+.wrap h2 {
+  width: 100%;
+}
+.wrap li {
+  width: 50%;
+}

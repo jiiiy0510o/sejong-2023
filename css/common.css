@@ -114,7 +114,44 @@ body header + nav .share {
   border-right: 1px solid #ddd;
 }
 body main {
-  width: 76%;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+body main .fixBar {
+  position: absolute;
+  top: 100px;
+  right: 6.4%;
+  width: 96px;
+  box-shadow: 4px 6px 18px -3px gray;
+  border-radius: 10px;
+  z-index: 100;
+  background-color: white;
+}
+body main .fixBar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 16px 0 16px;
+  position: relative;
+  border-top: 1px solid #999;
+  margin: 0 12px 36px 12px;
+}
+body main .fixBar li:first-child {
+  border-top: 0;
+}
+body main .fixBar li a {
+  position: absolute;
+  padding-top: 36px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  bottom: -20px;
+  color: #444;
+}
+body main article {
+  position: relative;
+  width: 1200px;
   margin: 0 auto;
 }
 body main .contents > .title {
@@ -143,38 +180,7 @@ body main .contents > .title h4 {
   font-weight: 600;
   padding: 24px 0;
 }
-body .fixBar {
-  position: absolute;
-  top: 100px;
-  right: 6.4%;
-  width: 96px;
-  box-shadow: 4px 6px 18px -3px gray;
-  border-radius: 10px;
-  z-index: 100;
-  background-color: white;
-}
-body .fixBar li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px 16px 0 16px;
-  position: relative;
-  border-top: 1px solid #999;
-  margin: 0 12px 36px 12px;
-}
-body .fixBar li:first-child {
-  border-top: 0;
-}
-body .fixBar li a {
-  position: absolute;
-  padding-top: 36px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  bottom: -20px;
-  color: #444;
-}
-body .topBtn {
+body main .topBtn {
   position: fixed;
   bottom: -100px;
   right: 32px;
@@ -189,7 +195,7 @@ body .topBtn {
   transition: top 1s ease-out;
   z-index: 100;
 }
-body .topBtn i {
+body main .topBtn i {
   position: relative;
   top: -4px;
   font-size: 0.6em;

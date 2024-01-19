@@ -1,8 +1,97 @@
-main .ingExhibit .exhibitInfo,
-main .endExhibit .exhibitInfo {
+main .wrap .tab {
   display: flex;
 }
-main .ingExhibit .exhibitInfo img,
-main .endExhibit .exhibitInfo img {
-  width: 300px;
+main .wrap .tab li {
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 900;
+}
+main .wrap .tab li:first-child {
+  background-color: #008571;
+  color: white;
+}
+main .wrap .tab li:last-child {
+  background-color: #ddd;
+}
+main .wrap .searchBox {
+  height: 104px;
+  padding: 20px 0;
+  position: relative;
+  border-bottom: 2px solid #333;
+}
+main .wrap .searchBox input {
+  border: 0;
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  border-radius: 4px;
+  width: 204px;
+}
+main .wrap .searchBox select {
+  border: 0;
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  border-radius: 4px;
+  width: 128px;
+}
+main .wrap .searchBox button {
+  border: none;
+  background-color: #999;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  position: absolute;
+  right: 260px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .wrap .searchBox .searchPeriod,
+main .wrap .searchBox .searchText {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .wrap .searchBox .searchText {
+  top: 76px;
+}
+main .wrap .ingExhibit .exhibitInfo,
+main .wrap .endExhibit .exhibitInfo {
+  display: flex;
+  gap: 32px;
+  padding: 50px 60px;
+  border-bottom: 1px solid #ddd;
+}
+main .wrap .ingExhibit .exhibitInfo .exhibitImg img,
+main .wrap .endExhibit .exhibitInfo .exhibitImg img {
+  width: 360px;
+}
+main .wrap .ingExhibit .exhibitInfo .exhibitText,
+main .wrap .endExhibit .exhibitInfo .exhibitText {
+  width: 70%;
+}
+main .wrap .ingExhibit .exhibitInfo .exhibitText .title,
+main .wrap .endExhibit .exhibitInfo .exhibitText .title {
+  font-weight: 900;
+  font-size: 32px;
+}
+main .wrap .ingExhibit .exhibitInfo .exhibitText .desc,
+main .wrap .endExhibit .exhibitInfo .exhibitText .desc {
+  width: 60%;
+  padding: 32px 0;
+  line-height: 1.6rem;
+  font-size: 0.92rem;
+  color: #777;
+}
+main .wrap .ingExhibit .exhibitInfo .exhibitText .period,
+main .wrap .ingExhibit .exhibitInfo .exhibitText .place,
+main .wrap .endExhibit .exhibitInfo .exhibitText .period,
+main .wrap .endExhibit .exhibitInfo .exhibitText .place {
+  padding: 8px 0;
+  font-weight: 600;
+  color: #444;
+}
+main .wrap .endExhibit {
+  display: none;
 }
