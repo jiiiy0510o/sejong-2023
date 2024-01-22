@@ -1,11 +1,65 @@
-.wrap {
+main .wrap {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   flex-direction: wrap;
 }
-.wrap h2 {
+main .wrap ul {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 0;
+  gap: 50px;
 }
-.wrap li {
-  width: 50%;
+main .wrap ul li.bgText {
+  width: 37.5%;
+  color: white;
+  line-height: 3.2rem;
+  font-size: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 8px 8px 16px 8px #ccc;
+}
+main .wrap ul li.bottomText {
+  width: 62.5%;
+  font-size: 1.06rem;
+}
+main .wrap ul li.bottomText p {
+  padding: 28px 0;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+}
+main .wrap ul li.bottomText p i {
+  font-size: 1.4rem;
+}
+main .wrap ul li.bottomText p strong {
+  display: inline-block;
+  width: 80px;
+  padding-left: 16px;
+}
+main .wrap ul li.bottomText img + p {
+  margin-top: 30px;
+}
+main .wrap ul:nth-child(2) {
+  padding-top: 24px;
+}
+main .wrap ul:nth-child(2) li:first-child {
+  background: url("/img/study.jpg") no-repeat;
+}
+main .wrap ul:nth-child(2) li:last-child {
+  background: url("/img/study02.jpg") no-repeat;
+}
+main .wrap ul:nth-child(3) li:first-child {
+  background: url("/img/study03.jpg") no-repeat;
+}
+main .wrap ul:nth-child(3) li:last-child {
+  background: url("/img/study04.jpg") no-repeat;
+}
+main .wrap ul:nth-child(4) li:first-child {
+  background: url("/img/study05.jpg") no-repeat;
+}
+main .wrap ul:nth-child(4) li:last-child {
+  background: url("/img/study06.jpg") no-repeat;
 }

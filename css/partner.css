@@ -1,0 +1,31 @@
+main .contents {
+  width: 100%;
+  background: url("/img/forest.jpg") 100% 200px no-repeat;
+}
+main .contents .wrap .bgArea {
+  text-align: center;
+  padding-top: 120px;
+  color: white;
+  height: 400px;
+}
+main .contents .wrap .bgArea strong {
+  font-size: 2rem;
+}
+main .contents .wrap .bgArea p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding-top: 50px;
+}
+main .contents .wrap .greenCounseling {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  gap: 24px;
+}
+main .contents .wrap .greenCounseling li {
+  text-align: center;
+  width: 250px;
+}
+main .contents .wrap .greenCounseling li p {
+  line-height: 1.2rem;
+}
