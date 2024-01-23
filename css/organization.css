@@ -1,0 +1,18 @@
+main .contents {
+  width: 100%;
+  background: url("/img/org_bg.jpg") 100% 240px no-repeat;
+}
+main .contents .wrap .bgArea {
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  height: 400px;
+}
+main .contents .wrap .bgArea strong {
+  font-size: 1.8rem;
+}
+main .contents .wrap .bgArea p {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  padding-top: 50px;
+}

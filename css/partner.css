@@ -19,13 +19,42 @@ main .contents .wrap .bgArea p {
 main .contents .wrap .greenCounseling {
   display: flex;
   justify-content: center;
-  height: 200px;
+  height: 480px;
   gap: 24px;
 }
 main .contents .wrap .greenCounseling li {
   text-align: center;
   width: 250px;
+  height: 200px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #333;
+  padding: 100px 12px 0px 12px;
+  cursor: pointer;
+}
+main .contents .wrap .greenCounseling li span {
+  color: #299a52;
+  font-weight: 900;
+  padding-top: 48px;
+  font-size: 1.2rem;
+  display: inline-block;
 }
 main .contents .wrap .greenCounseling li p {
-  line-height: 1.2rem;
+  line-height: 1.4rem;
+  font-size: 0.86rem;
+}
+main .contents .wrap .greenCounseling li:hover {
+  border: 1px solid #299a52;
+  box-shadow: 5px 5px 50px 8px rgb(234, 233, 233);
+}
+main .contents .wrap .greenCounseling li:first-child {
+  background: url("/img/garden01.gif") center 52px no-repeat;
+}
+main .contents .wrap .greenCounseling li:nth-child(2) {
+  background: url("/img/garden02.gif") center 52px no-repeat;
+}
+main .contents .wrap .greenCounseling li:nth-child(3) {
+  background: url("/img/garden03.gif") center 52px no-repeat;
+}
+main .contents .wrap .greenCounseling li:last-child {
+  background: url("/img/garden04.gif") center 52px no-repeat;
 }
