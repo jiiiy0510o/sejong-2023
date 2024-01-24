@@ -219,17 +219,23 @@ body main article {
   width: 1200px;
   margin: 0 auto;
 }
-body main .contents > .title {
+body main article.contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main article.contents > .title {
   padding: 60px 0;
   text-align: center;
   line-height: 2rem;
 }
-body main .contents > .title h1 {
+body main article.contents > .title h1 {
   color: #299a52;
   font-weight: 900;
   position: relative;
 }
-body main .contents > .title h1:before {
+body main article.contents > .title h1:before {
   content: "";
   display: block;
   background: url("/img/zig-zag.png") no-repeat;
@@ -241,7 +247,7 @@ body main .contents > .title h1:before {
   top: -10px;
   transform: translateX(-50%);
 }
-body main .contents > .title h4 {
+body main article.contents > .title h4 {
   font-weight: 600;
   padding: 24px 0;
 }
