@@ -76,6 +76,9 @@ main .contents .wrap .twoGoals .mission li:first-child:after {
   background: url("/img/org_icon_02.png") no-repeat;
 }
 main .contents .wrap .goals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #f4fafb;
 }
 main .contents .wrap .goals .goalTitle {
@@ -87,6 +90,38 @@ main .contents .wrap .goals .goalTitle strong {
 main .contents .wrap .goals .goalTitle p {
   padding-top: 40px;
   font-weight: 900;
+}
+main .contents .wrap .goals .circle {
+  position: relative;
+  text-align: center;
+  width: 200px;
+  height: 130px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding-top: 70px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  z-index: 1;
+  box-shadow: 1px 3px 5px 3px #ddd;
+  margin: 60px 0;
+}
+main .contents .wrap .goals .circle p {
+  font-weight: 500;
+  margin-top: 12px;
+}
+main .contents .wrap .goals .circle:after {
+  content: "";
+  width: 176px;
+  height: 176px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border: 6px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to top, rgb(89, 219, 219) 0%, rgb(81, 81, 172) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 50%;
+  z-index: -1;
 }
 main .contents .wrap .goals dl dt {
   font-size: 1.4rem;
