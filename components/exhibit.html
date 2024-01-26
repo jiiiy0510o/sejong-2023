@@ -115,7 +115,7 @@
                 <img src="/img/exhibit_end_01.jpg" alt="" />
               </div>
               <ul class="exhibitText">
-                <li class="title">2023 대한민국 정원식물 전시·품평회</li>
+                <li class="title special">2023 대한민국 정원식물 전시·품평회</li>
                 <li class="desc">
                   대한민국 정원식물 전시·품평회는 특별한 식물을 찾고 있는 가드너에게 새로운 정원식물을 한자리에 모아
                   소개하는 전시입니다. 국립세종수목원에서 열리는 2023년 하반기 전시·품평회에는 27개 기업 및 기관이
@@ -130,7 +130,7 @@
                 <img src="/img/exhibit_end_02.jpg" alt="" />
               </div>
               <ul class="exhibitText">
-                <li class="title">700년 아라홍련 세종에 피다</li>
+                <li class="title special">700년 아라홍련 세종에 피다</li>
                 <li class="desc">
                   국립세종수목원, 경남 함안군 협업 아라홍련 특별전 700년간 잠들어있던 고려 연꽃, 아라홍련을 아시나요?
                 </li>
@@ -143,7 +143,7 @@
                 <img src="/img/exhibit_end_03.jpg" alt="" />
               </div>
               <ul class="exhibitText">
-                <li class="title">2023 대한민국 정원식물 전시·품평회 - 상반기</li>
+                <li class="title special">2023 대한민국 정원식물 전시·품평회 - 상반기</li>
                 <li class="desc">
                   대한민국 정원식물 전시·품평회는 특별한 식물을 찾고 있는 가드너에게 새로운 정원식물을 한자리에 모아
                   소개하는 전시입니다. 순천만국가정원에서 열리는 2023년 상반기 전시·품평회에는 37개 기업 및 기관이
@@ -158,7 +158,7 @@
                 <img src="/img/exhibit_end_04.jpg" alt="" />
               </div>
               <ul class="exhibitText">
-                <li class="title">K가든, 꽃을 틔우다 「양화소록」편</li>
+                <li class="title special">K가든, 꽃을 틔우다 「양화소록」편</li>
                 <li class="desc">
                   글로벌 정원문화 확산을 위해 우리 전통 정원과 식물 콘텐츠를 발굴하여 소개하는 'K가든, 꽃을 틔우다'
                   기획전 시리즈를 선보입니다. 그 첫 번째 전시로, 강희안의 <양화소록>에 수록된 식물과 가드닝에 관한
@@ -176,14 +176,26 @@
     <script src="/js/common.js"></script>
     <script>
       //전시 진행중 종료 탭
-      let ingbtn = document.querySelector(".tab li:first-child");
-      let endbtn = document.querySelector(".tab li:last-child");
+      let ingBtn = document.querySelector(".tab li:first-child");
+      let endBtn = document.querySelector(".tab li:last-child");
       let ingEx = document.querySelector(".ingExhibit");
       let endEx = document.querySelector(".endExhibit");
 
-      endbtn.addEventListener("click", function () {
+      endBtn.addEventListener("click", function () {
+        this.style.backgroundColor = "#008571";
+        ingBtn.style.backgroundColor = "#ddd";
+        this.style.color = "white";
+        ingBtn.style.color = "#333";
         ingEx.style.display = "none";
         endEx.style.display = "block";
+      });
+      ingBtn.addEventListener("click", function () {
+        this.style.backgroundColor = "#008571";
+        endBtn.style.backgroundColor = "#ddd";
+        this.style.color = "white";
+        endBtn.style.color = "#333";
+        endEx.style.display = "none";
+        ingEx.style.display = "block";
       });
     </script>
   </body>

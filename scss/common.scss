@@ -221,11 +221,10 @@ body {
     }
     article {
       position: relative;
-      width: 1200px;
+      width: 100%;
       margin: 0 auto;
 
       &.contents {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -255,6 +254,9 @@ body {
             font-weight: 600;
             padding: 24px 0;
           }
+        }
+        .wrap {
+          width: 1200px;
         }
       }
     }

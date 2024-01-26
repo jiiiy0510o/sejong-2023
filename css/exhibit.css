@@ -7,6 +7,7 @@ main .wrap .tab li {
   text-align: center;
   padding: 20px 0;
   font-weight: 900;
+  border-radius: 2px;
 }
 main .wrap .tab li:first-child {
   background-color: #008571;

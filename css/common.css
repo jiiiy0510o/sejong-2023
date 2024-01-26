@@ -216,11 +216,10 @@ body main .fixBar li a {
 }
 body main article {
   position: relative;
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 body main article.contents {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,6 +249,9 @@ body main article.contents > .title h1:before {
 body main article.contents > .title h4 {
   font-weight: 600;
   padding: 24px 0;
+}
+body main article.contents .wrap {
+  width: 1200px;
 }
 body main .topBtn {
   position: fixed;

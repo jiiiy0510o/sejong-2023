@@ -18,8 +18,10 @@ main {
       }
       .twoGoals {
         display: flex;
+        justify-content: center;
         gap: 16px;
         height: 600px;
+
         ul {
           position: relative;
           width: 500px;
@@ -79,10 +81,11 @@ main {
         }
       }
       .goals {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         background-color: #f4fafb;
+        padding: 80px 60px;
+        background-image: url("/img/org_line.png");
+        background-position: center 440px;
+        background-repeat: no-repeat;
         .goalTitle {
           text-align: center;
           strong {
@@ -105,7 +108,7 @@ main {
           font-weight: 700;
           z-index: 1;
           box-shadow: 1px 3px 5px 3px #ddd;
-          margin: 60px 0;
+          margin: 60px auto;
           p {
             font-weight: 500;
             margin-top: 12px;
@@ -127,15 +130,89 @@ main {
           }
         }
         dl {
+          padding: 40px 0;
           dt {
             font-size: 1.4rem;
             position: relative;
             z-index: 1;
+            padding-bottom: 40px;
+            font-weight: 600;
             span {
               position: absolute;
+              top: -32px;
               color: #aaf5f1;
-              font-size: 3rem;
+              font-size: 4.8rem;
+              font-weight: 300;
+              letter-spacing: 2px;
               z-index: -1;
+            }
+          }
+          dd {
+            padding: 8px 0;
+            &:before {
+              content: "·";
+              padding: 0 8px;
+            }
+          }
+          &:nth-child(3),
+          &:nth-child(6) {
+            position: relative;
+            padding-left: 60%;
+          }
+          &:nth-child(3):before {
+            content: url("/img/tree.png");
+            position: absolute;
+            left: 0px;
+            top: -120px;
+          }
+          &:nth-child(6):before {
+            content: url("/img/flower.png");
+            position: absolute;
+            top: -400px;
+            right: 30px;
+          }
+        }
+      }
+      .summary {
+        padding: 50px 0px 100px 0px;
+        ul {
+          display: flex;
+          border-bottom: 1px solid #ddd;
+          text-align: center;
+          height: 100px;
+          li {
+            width: 33.3333%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 2rem;
+            font-size: 0.96rem;
+          }
+
+          &:nth-child(2) {
+            margin-top: 36px;
+            border-top: 2px solid #333;
+          }
+          &:nth-child(3) {
+            li {
+              font-weight: 900;
+              strong {
+                font-size: 1.6rem;
+                span {
+                  color: #299a52;
+                }
+              }
+            }
+          }
+        }
+        ol {
+          margin-top: 28px;
+          li {
+            padding: 8px 0;
+            font-size: 0.9rem;
+            &:before {
+              content: "·";
+              padding: 0 8px;
             }
           }
         }
