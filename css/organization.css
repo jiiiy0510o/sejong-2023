@@ -204,8 +204,5 @@ main .contents .wrap .summary ol {
 main .contents .wrap .summary ol li {
   padding: 8px 0;
   font-size: 0.9rem;
-}
-main .contents .wrap .summary ol li:before {
-  content: "·";
-  padding: 0 8px;
+  list-style: circle;
 }

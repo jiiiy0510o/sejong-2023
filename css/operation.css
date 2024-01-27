@@ -58,19 +58,54 @@ main .contents .wrap .bgArea {
   height: 320px;
   padding: 100px 0;
   display: flex;
+  gap: 24px;
   justify-content: center;
 }
 main .contents .wrap .bgArea ul {
   width: 320px;
   height: 320px;
   border: 1px solid #ddd;
-  margin: 0 24px;
+  position: relative;
+  padding: 20px;
+}
+main .contents .wrap .bgArea ul li {
+  text-align: center;
+  line-height: 1.6rem;
+}
+main .contents .wrap .bgArea ul li span {
+  font-weight: 700;
+}
+main .contents .wrap .bgArea ul li button {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0;
+  background-color: #0ba17c;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 700;
 }
 main .contents .wrap .bgArea ul li:first-child {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #777;
+  width: 90px;
+  height: 90px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+main .contents .wrap .bgArea ul li:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding: 20px 0;
+}
+main .contents .wrap .bgArea ul:first-child li:first-child {
+  background-image: url("/img/icon_guide1.png");
+}
+main .contents .wrap .bgArea ul:nth-child(2) li:first-child {
+  background-image: url("/img/icon_guide2.png");
+}
+main .contents .wrap .bgArea ul:last-child li:first-child {
+  background-image: url("/img/icon_guide3.png");
 }
 main .contents .wrap .prohibit {
   display: flex;
@@ -114,8 +149,10 @@ main .contents .wrap .fare .iconList li {
 }
 main .contents .wrap .fare .iconList li .desc {
   padding-top: 32px;
+  text-align: center;
+  font-size: 0.86rem;
 }
 main .contents .wrap .fare .text li {
-  text-decoration: dotted;
+  list-style: circle;
   line-height: 1.6rem;
 }

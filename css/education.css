@@ -10,33 +10,32 @@ main .contents .wrap ul {
 main .contents .wrap ul li {
   width: 680px;
   height: 460px;
-}
-main .contents .wrap ul li .eduImg {
-  background-size: 640px 460px;
+  background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  position: relative;
 }
 main .contents .wrap ul li h4 {
   padding: 20px 0;
   font-weight: 600;
   color: #333;
+  position: absolute;
+  bottom: -52px;
 }
-main .contents .wrap ul:nth-child(2) li:first-child .eduImg {
+main .contents .wrap ul:nth-child(2) li:first-child {
   background: url("/img/edu01.png") no-repeat;
 }
-main .contents .wrap ul:nth-child(2) li:last-child .eduImg {
+main .contents .wrap ul:nth-child(2) li:last-child {
   background: url("/img/edu02.png") no-repeat;
 }
-main .contents .wrap ul:nth-child(4) li:first-child .eduImg {
+main .contents .wrap ul:nth-child(4) li:first-child {
   background: url("/img/edu03.png") no-repeat;
 }
-main .contents .wrap ul:nth-child(4) li:last-child .eduImg {
+main .contents .wrap ul:nth-child(4) li:last-child {
   background: url("/img/edu04.png") no-repeat;
 }
-main .contents .wrap ul:nth-child(6) li:first-child .eduImg {
+main .contents .wrap ul:nth-child(6) li:first-child {
   background: url("/img/edu05.png") no-repeat;
 }
-main .contents .wrap ul:nth-child(6) li:last-child .eduImg {
+main .contents .wrap ul:nth-child(6) li:last-child {
   background: url("/img/edu06.png") no-repeat;
 }

@@ -32,9 +32,10 @@ body header nav ul {
 }
 body header nav ul li {
   font-weight: 900;
-  padding: 16px 12px;
   position: relative;
-  cursor: pointer;
+}
+body header nav ul li a {
+  padding: 16px 12px;
 }
 body header nav ul li:after {
   content: "";
@@ -42,7 +43,7 @@ body header nav ul li:after {
   height: 4px;
   position: absolute;
   left: 0;
-  bottom: -16px;
+  bottom: -32px;
   background-color: #299a52;
   transform: scaleX(0);
   transition: 0.3s ease-in-out;
@@ -143,22 +144,38 @@ body header + nav {
   padding: 0 12%;
   height: 52px;
 }
-body header + nav select {
-  appearance: none;
-  -o-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: none;
-  width: 168px;
+body header + nav .select {
+  width: 120px;
+  border-right: 1px solid #ddd;
+}
+body header + nav .select .selected {
+  height: 16px;
+  padding: 18px 8px;
   position: relative;
 }
-body header + nav select:after {
+body header + nav .select .selected .arrow {
+  width: 12px;
+  height: 8px;
   position: absolute;
-  top: 0;
-  display: inline-block;
-  content: "";
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
   background: url("/img/icon/down.png") no-repeat;
-  margin-right: 10px;
+  background-size: 12px 8px;
+}
+body header + nav .select ul li {
+  background-color: #fff;
+  padding: 12px 8px;
+  width: 100%;
+  height: 28px;
+  border: 1px solid #ddd;
+  line-height: 1.2rem;
+  border-top: 0;
+}
+body header + nav .select ul li:hover {
+  background-color: #299a52;
+  color: white;
 }
 body header + nav .share {
   position: absolute;

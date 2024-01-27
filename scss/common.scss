@@ -31,16 +31,17 @@ body {
 
         li {
           font-weight: 900;
-          padding: 16px 12px;
           position: relative;
-          cursor: pointer;
+          a {
+            padding: 16px 12px;
+          }
           &:after {
             content: "";
             width: 100%;
             height: 4px;
             position: absolute;
             left: 0;
-            bottom: -16px;
+            bottom: -32px;
             background-color: #299a52;
             transform: scaleX(0);
             transition: 0.3s ease-in-out;
@@ -147,21 +148,40 @@ body {
     padding: 0 12%;
     height: 52px;
 
-    select {
-      appearance: none;
-      -o-appearance: none; //구 오페라
-      -webkit-appearance: none; //크롬, 사파리, 오페라
-      -moz-appearance: none; //파이어폭스
-      border: none;
-      width: 168px;
-      position: relative;
-      &:after {
-        position: absolute;
-        top: 0;
-        display: inline-block;
-        content: "";
-        background: url("/img/icon/down.png") no-repeat;
-        margin-right: 10px;
+    .select {
+      width: 120px;
+      border-right: 1px solid #ddd;
+      .selected {
+        height: 16px;
+        padding: 18px 8px;
+
+        position: relative;
+        .arrow {
+          width: 12px;
+          height: 8px;
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 3;
+          background: url("/img/icon/down.png") no-repeat;
+          background-size: 12px 8px;
+        }
+      }
+      ul {
+        li {
+          background-color: #fff;
+          padding: 12px 8px;
+          width: 100%;
+          height: 28px;
+          border: 1px solid #ddd;
+          line-height: 1.2rem;
+          border-top: 0;
+          &:hover {
+            background-color: #299a52;
+            color: white;
+          }
+        }
       }
     }
     .share {
