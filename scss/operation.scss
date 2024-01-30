@@ -70,6 +70,8 @@ main {
           border: 1px solid #ddd;
           position: relative;
           padding: 20px;
+          background-color: #fff;
+          z-index: 0;
           li {
             text-align: center;
             line-height: 1.6rem;

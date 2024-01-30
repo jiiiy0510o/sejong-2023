@@ -149,37 +149,46 @@ body {
     height: 52px;
 
     .select {
-      width: 120px;
+      font-size: 0.86rem;
+      width: 200px;
       border-right: 1px solid #ddd;
+
       .selected {
         height: 16px;
-        padding: 18px 8px;
-
+        padding: 18px 20px;
         position: relative;
+        &:hover {
+          background-color: #299a52;
+          color: white;
+        }
         .arrow {
           width: 12px;
           height: 8px;
           position: absolute;
-          right: 8px;
+          right: 12px;
           top: 50%;
           transform: translateY(-50%);
           z-index: 3;
           background: url("/img/icon/down.png") no-repeat;
-          background-size: 12px 8px;
+          background-size: 12px 6px;
         }
       }
       ul {
+        position: relative;
+        z-index: 10;
+        display: none;
         li {
-          background-color: #fff;
-          padding: 12px 8px;
-          width: 100%;
+          padding: 12px 20px;
           height: 28px;
           border: 1px solid #ddd;
-          line-height: 1.2rem;
+          line-height: 1.8rem;
           border-top: 0;
+          background-color: #fff;
+          &:first-child {
+            background-color: transparent;
+          }
           &:hover {
-            background-color: #299a52;
-            color: white;
+            color: #527552;
           }
         }
       }

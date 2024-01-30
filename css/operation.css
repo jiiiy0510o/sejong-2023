@@ -67,6 +67,8 @@ main .contents .wrap .bgArea ul {
   border: 1px solid #ddd;
   position: relative;
   padding: 20px;
+  background-color: #fff;
+  z-index: 0;
 }
 main .contents .wrap .bgArea ul li {
   text-align: center;
