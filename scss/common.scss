@@ -157,20 +157,18 @@ body {
         height: 16px;
         padding: 18px 20px;
         position: relative;
-        &:hover {
-          background-color: #299a52;
-          color: white;
-        }
+
         .arrow {
-          width: 12px;
-          height: 8px;
           position: absolute;
           right: 12px;
           top: 50%;
           transform: translateY(-50%);
           z-index: 3;
-          background: url("/img/icon/down.png") no-repeat;
-          background-size: 12px 6px;
+          &:after {
+            content: "\f078";
+            font-family: "fontawesome";
+            display: block;
+          }
         }
       }
       ul {

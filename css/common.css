@@ -154,20 +154,17 @@ body header + nav .select .selected {
   padding: 18px 20px;
   position: relative;
 }
-body header + nav .select .selected:hover {
-  background-color: #299a52;
-  color: white;
-}
 body header + nav .select .selected .arrow {
-  width: 12px;
-  height: 8px;
   position: absolute;
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
-  background: url("/img/icon/down.png") no-repeat;
-  background-size: 12px 6px;
+}
+body header + nav .select .selected .arrow:after {
+  content: "\f078";
+  font-family: "fontawesome";
+  display: block;
 }
 body header + nav .select ul {
   position: relative;
