@@ -4,10 +4,12 @@ $("footer").load("/components/common/footer.html");
 $(".sideBtn").load("/components/common/sideBtn.html");
 
 let allSelect = document.querySelectorAll(".select");
+let list = document.querySelectorAll(".select+ul li");
 
 allSelect.forEach(function (select) {
   let ulList = select.querySelector("ul");
   let selected = select.querySelector(".selected");
+
   select.addEventListener("click", function () {
     allSelect.forEach(function (otherSelect) {
       let otherUlList = otherSelect.querySelector("ul");
@@ -23,9 +25,14 @@ allSelect.forEach(function (select) {
       selected.style.color = "";
       ulList.style.display = "none";
     } else {
-      selected.style.backgroundColor = "#299a52";
+      selected.style.backgroundColor = "#028662";
       selected.style.color = "#fff";
       ulList.style.display = "block";
     }
+    list.forEach(function (li) {
+      li.addEventListener("click", function () {
+        console.log("dd");
+      });
+    });
   });
 });

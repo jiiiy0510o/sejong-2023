@@ -100,14 +100,14 @@ main {
       border-radius: 20px;
       position: relative;
       top: -100px;
-      display: flex;
-      align-items: flex-start;
-      gap: 24px;
       z-index: 3;
       padding: 4px 24px;
-
+      width: 1200px;
+      height: 400px;
+      clear: both;
       .exhibit {
-        width: 900px;
+        width: 600px;
+        float: left;
 
         .miniSlide {
           display: flex;
@@ -140,7 +140,8 @@ main {
         }
       }
       .closure {
-        width: 300px;
+        float: right;
+        width: 400px;
         text-align: center;
 
         div {
@@ -183,7 +184,7 @@ main {
       justify-content: center;
 
       section {
-        width: 49%;
+        width: 520px;
         border-bottom: 1px solid #ddd;
         &:first-child {
           margin-right: 1%;
@@ -238,15 +239,15 @@ main {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      width: 1200px;
+      width: 1100px;
       height: 350px;
       margin: 0 auto;
-      gap: 12px;
+      gap: 8px;
       padding: 100px 0;
       .reserveBox {
         color: white;
         border-radius: 2px;
-        width: 16%;
+        width: 12%;
         height: 248px;
         text-align: center;
         padding: 36px 12px;
@@ -331,7 +332,7 @@ main {
           color: #333;
           background-color: #f9e003;
           li:first-child {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
           }
           i {
             color: #037dfd;
@@ -363,7 +364,7 @@ main {
           color: #333;
           background-color: #efefef;
           li:first-child {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
           }
           .btn {
             color: #333;
@@ -383,11 +384,11 @@ main {
       height: 500px;
       background: url("../img/greenBg.jpg") no-repeat;
       background-size: 100% 260px;
-      z-index: -1;
+
       .title {
         color: white;
         margin: 0 auto;
-        width: 1200px;
+        width: 1100px;
         height: 88px;
         span {
           color: inherit;
@@ -402,20 +403,33 @@ main {
         width: 100%;
         display: flex;
         justify-content: center;
-        gap: 20px;
+        align-items: center;
+        z-index: 100;
         .left,
         .right {
-          position: relative;
-          top: -24px;
+          position: absolute;
+          top: 60px;
           font-size: 2.6rem;
           color: white;
           display: flex;
           align-items: center;
-          width: 2%;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          cursor: pointer;
+        }
+        .left {
+          left: 320px;
+        }
+        .right {
+          right: 320px;
         }
 
         .placeWrap {
-          width: 1060px;
+          position: absolute;
+          top: 0%;
+
+          width: 1052px;
           display: flex;
           overflow: hidden;
           gap: 8px;
@@ -471,6 +485,9 @@ main {
         .closure {
           width: 100% !important;
         }
+      }
+      .flexBoard {
+        width: 90%;
       }
     }
   }

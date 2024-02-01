@@ -94,14 +94,15 @@ main article .eventSlide {
   border-radius: 20px;
   position: relative;
   top: -100px;
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
   z-index: 3;
   padding: 4px 24px;
+  width: 1200px;
+  height: 400px;
+  clear: both;
 }
 main article .eventSlide .exhibit {
-  width: 900px;
+  width: 600px;
+  float: left;
 }
 main article .eventSlide .exhibit .miniSlide {
   display: flex;
@@ -132,7 +133,8 @@ main article .eventSlide .exhibit .dots div:first-child {
   background-color: #555;
 }
 main article .eventSlide .closure {
-  width: 300px;
+  float: right;
+  width: 400px;
   text-align: center;
 }
 main article .eventSlide .closure div {
@@ -173,7 +175,7 @@ main article .flexBoard {
   justify-content: center;
 }
 main article .flexBoard section {
-  width: 49%;
+  width: 520px;
   border-bottom: 1px solid #ddd;
 }
 main article .flexBoard section:first-child {
@@ -227,16 +229,16 @@ main article.reserve {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 1200px;
+  width: 1100px;
   height: 350px;
   margin: 0 auto;
-  gap: 12px;
+  gap: 8px;
   padding: 100px 0;
 }
 main article.reserve .reserveBox {
   color: white;
   border-radius: 2px;
-  width: 16%;
+  width: 12%;
   height: 248px;
   text-align: center;
   padding: 36px 12px;
@@ -318,7 +320,7 @@ main article.reserve .reserveBox:nth-child(4) {
   background-color: #f9e003;
 }
 main article.reserve .reserveBox:nth-child(4) li:first-child {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 main article.reserve .reserveBox:nth-child(4) i {
   color: #037dfd;
@@ -347,7 +349,7 @@ main article.reserve .reserveBox:last-child {
   background-color: #efefef;
 }
 main article.reserve .reserveBox:last-child li:first-child {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 main article.reserve .reserveBox:last-child .btn {
   color: #333;
@@ -364,12 +366,11 @@ main article.introduce {
   height: 500px;
   background: url("../img/greenBg.jpg") no-repeat;
   background-size: 100% 260px;
-  z-index: -1;
 }
 main article.introduce .title {
   color: white;
   margin: 0 auto;
-  width: 1200px;
+  width: 1100px;
   height: 88px;
 }
 main article.introduce .title span {
@@ -384,20 +385,32 @@ main article.introduce .placeContainer {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  z-index: 100;
 }
 main article.introduce .placeContainer .left,
 main article.introduce .placeContainer .right {
-  position: relative;
-  top: -24px;
+  position: absolute;
+  top: 60px;
   font-size: 2.6rem;
   color: white;
   display: flex;
   align-items: center;
-  width: 2%;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+main article.introduce .placeContainer .left {
+  left: 320px;
+}
+main article.introduce .placeContainer .right {
+  right: 320px;
 }
 main article.introduce .placeContainer .placeWrap {
-  width: 1060px;
+  position: absolute;
+  top: 0%;
+  width: 1052px;
   display: flex;
   overflow: hidden;
   gap: 8px;
@@ -448,5 +461,8 @@ main article.introduce .placeContainer .placeWrap .place dl dt {
   }
   .main article .eventSlide .closure {
     width: 100% !important;
+  }
+  .main article .flexBoard {
+    width: 90%;
   }
 }

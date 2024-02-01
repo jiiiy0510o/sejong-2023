@@ -176,13 +176,13 @@
       </article>
       <article class="introduce">
         <div class="title">
-          <h1>국립세종수목원 전시원 소개</h1>
+          <h2>국립세종수목원 전시원 소개</h2>
           <span
             ><a href="">바로가기<i class="fa-solid fa-arrow-right-long"></i></a
           ></span>
         </div>
         <div class="placeContainer">
-          <div class="left">
+          <div class="left" role="button">
             <i class="fa-solid fa-chevron-left"></i>
           </div>
           <div class="placeWrap">
@@ -222,7 +222,7 @@
               </dl>
             </div>
           </div>
-          <div class="right">
+          <div class="right" role="button">
             <i class="fa-solid fa-chevron-right"></i>
           </div>
         </div>
@@ -331,12 +331,17 @@
         });
       });
 
+      //소개부분 화살표 클릭
       let leftBtn = document.querySelector(".left");
       let rightBtn = document.querySelector(".right");
-      let placeWrap = document.querySelectorAll(".placeWrap .place");
+      let placeWrap = document.querySelector(".placeWrap");
+      leftBtn.addEventListener("click", function () {
+        placeWrap.style.left = -350 + "px";
+      });
 
-      leftBtn.addEventListener("click", function () {});
-      rightBtn.addEventListener("click", function () {});
+      rightBtn.addEventListener("click", function () {
+        console.log("Right button clicked");
+      });
     </script>
   </body>
 </html>
