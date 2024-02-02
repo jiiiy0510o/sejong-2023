@@ -102,11 +102,11 @@ main {
       top: -100px;
       z-index: 3;
       padding: 4px 24px;
-      width: 1200px;
-      height: 400px;
-      clear: both;
+      width: 1152px;
+      height: 420px;
+
       .exhibit {
-        width: 600px;
+        width: 840px;
         float: left;
 
         .miniSlide {
@@ -116,7 +116,7 @@ main {
 
           img {
             position: relative;
-            height: 294px;
+            height: 276px;
             transition: left 0.3s ease-in-out;
           }
         }
@@ -141,7 +141,7 @@ main {
       }
       .closure {
         float: right;
-        width: 400px;
+        width: 280px;
         text-align: center;
 
         div {
@@ -151,7 +151,7 @@ main {
           }
         }
         ul {
-          height: 248px;
+          height: 232px;
           padding-top: 8px;
           border-left: 1px solid #ddd;
           border-right: 1px solid #ddd;
@@ -239,7 +239,6 @@ main {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      width: 1100px;
       height: 350px;
       margin: 0 auto;
       gap: 8px;

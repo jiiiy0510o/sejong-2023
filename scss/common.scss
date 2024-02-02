@@ -213,7 +213,7 @@ body {
   main {
     position: relative;
     width: 100%;
-    margin: 0 auto;
+
     .fixBar {
       position: absolute;
       top: 100px;
@@ -247,7 +247,7 @@ body {
     }
     article {
       position: relative;
-      width: 100%;
+      width: 1200px;
       margin: 0 auto;
 
       &.contents {
@@ -299,7 +299,7 @@ body {
       font-size: 0.74rem;
       font-weight: 700;
       transition: top 1s ease-out;
-      z-index: 100;
+      z-index: 150;
       i {
         position: relative;
         top: 8px;

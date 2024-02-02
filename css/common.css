@@ -205,7 +205,6 @@ body header + nav .share {
 body main {
   position: relative;
   width: 100%;
-  margin: 0 auto;
 }
 body main .fixBar {
   position: absolute;
@@ -240,7 +239,7 @@ body main .fixBar li a {
 }
 body main article {
   position: relative;
-  width: 100%;
+  width: 1200px;
   margin: 0 auto;
 }
 body main article.contents {
@@ -290,7 +289,7 @@ body main .topBtn {
   font-size: 0.74rem;
   font-weight: 700;
   transition: top 1s ease-out;
-  z-index: 100;
+  z-index: 150;
 }
 body main .topBtn i {
   position: relative;
