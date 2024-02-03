@@ -119,3 +119,9 @@ main {
     }
   }
 }
+
+@media screen and (max-width: 1199px) {
+  main .searchBox button {
+    right: 210px !important;
+  }
+}

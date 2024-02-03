@@ -355,3 +355,12 @@ body footer .footerInfo div:last-child {
 body footer .footerInfo div:last-child img {
   height: 60px;
 }
+
+@media screen and (max-width: 1199px) {
+  main .wrap {
+    width: 1100px !important;
+  }
+  .fixBar {
+    display: none;
+  }
+}

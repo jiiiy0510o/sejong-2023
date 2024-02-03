@@ -158,3 +158,13 @@ main .contents .wrap .fare .text li {
   list-style: circle;
   line-height: 1.6rem;
 }
+
+@media screen and (max-width: 1199px) {
+  .wrap .prohibit li {
+    width: 500px !important;
+  }
+  .wrap .notice li,
+  .wrap .benefit li {
+    width: 460px !important;
+  }
+}

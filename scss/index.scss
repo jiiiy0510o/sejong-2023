@@ -488,6 +488,12 @@ main {
       .flexBoard {
         width: 90%;
       }
+      &.introduce {
+        .left,
+        .right {
+          display: none;
+        }
+      }
     }
   }
 }

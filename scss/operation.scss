@@ -176,3 +176,19 @@ main {
     }
   }
 }
+
+@media screen and (max-width: 1199px) {
+  .wrap {
+    .prohibit {
+      li {
+        width: 500px !important;
+      }
+    }
+    .notice,
+    .benefit {
+      li {
+        width: 460px !important;
+      }
+    }
+  }
+}

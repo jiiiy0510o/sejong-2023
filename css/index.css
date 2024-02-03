@@ -463,4 +463,8 @@ main article.introduce .placeContainer .placeWrap .place dl dt {
   .main article .flexBoard {
     width: 90%;
   }
+  .main article.introduce .left,
+  .main article.introduce .right {
+    display: none;
+  }
 }
