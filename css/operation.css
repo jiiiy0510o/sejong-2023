@@ -60,6 +60,7 @@ main .contents .wrap .bgArea {
   display: flex;
   gap: 24px;
   justify-content: center;
+  background: url("/img/bg");
 }
 main .contents .wrap .bgArea ul {
   width: 320px;

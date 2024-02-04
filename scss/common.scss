@@ -7,6 +7,53 @@ body {
   overflow-x: hidden;
   position: relative;
 
+  .modalWrap {
+    border: 1px solid #ccc;
+    z-index: 100;
+    width: 380px;
+    height: 560px;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    .modal {
+      width: 380px;
+      height: 560px;
+
+      &:first-child {
+        display: none;
+        background: url("/img/modal1.jpg") center top no-repeat;
+        background-size: 100% 94%;
+      }
+      &:nth-child(2) {
+        display: none;
+        background: url("/img/modal2.png") center top no-repeat;
+        background-size: 100% 94%;
+      }
+      &:last-child {
+        display: block;
+        background: url("/img/modal3.jpg") center top no-repeat;
+        background-size: 100% 94%;
+      }
+      .close {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        label[for="close"] {
+          font-size: 0.8rem;
+          padding-right: 12px;
+        }
+        input[type="button"] {
+          cursor: pointer;
+          font-size: 0.72rem;
+          background-color: transparent;
+          border: 1px solid #333;
+        }
+      }
+    }
+  }
+
   header {
     display: flex;
     justify-content: center;

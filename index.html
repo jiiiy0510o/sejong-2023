@@ -13,6 +13,29 @@
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
+    <div class="modalWrap">
+      <div class="modal">
+        <form class="close">
+          <input type="checkbox" />
+          <label for="close">오늘 하루 그만보기</label>
+          <input type="button" value="닫기" />
+        </form>
+      </div>
+      <div class="modal">
+        <form class="close">
+          <input type="checkbox" />
+          <label for="close">오늘 하루 그만보기</label>
+          <input type="button" value="닫기" />
+        </form>
+      </div>
+      <div class="modal">
+        <form class="close">
+          <input type="checkbox" />
+          <label for="close">오늘 하루 그만보기</label>
+          <input type="button" value="닫기" />
+        </form>
+      </div>
+    </div>
     <header></header>
 
     <main>
@@ -341,6 +364,13 @@
 
       rightBtn.addEventListener("click", function () {
         console.log("Right button clicked");
+      });
+
+      //모달 닫기버튼
+      let modalBtn = document.querySelector(".modal input[type=button]");
+
+      modalBtn.addEventListener("click", function () {
+        console.log("clicked!!");
       });
     </script>
   </body>
