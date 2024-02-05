@@ -16,22 +16,16 @@
     <div class="modalWrap">
       <div class="modal">
         <form class="close">
-          <input type="checkbox" />
-          <label for="close">오늘 하루 그만보기</label>
           <input type="button" value="닫기" />
         </form>
       </div>
       <div class="modal">
         <form class="close">
-          <input type="checkbox" />
-          <label for="close">오늘 하루 그만보기</label>
           <input type="button" value="닫기" />
         </form>
       </div>
       <div class="modal">
         <form class="close">
-          <input type="checkbox" />
-          <label for="close">오늘 하루 그만보기</label>
           <input type="button" value="닫기" />
         </form>
       </div>
@@ -367,10 +361,12 @@
       });
 
       //모달 닫기버튼
-      let modalBtn = document.querySelector(".modal input[type=button]");
-
-      modalBtn.addEventListener("click", function () {
-        console.log("clicked!!");
+      let modals = document.querySelectorAll(".modal");
+      modals.forEach(function (modal) {
+        let closeBtn = modal.querySelector("form input:last-child");
+        closeBtn.addEventListener("click", function () {
+          modal.style.display = "none";
+        });
       });
     </script>
   </body>

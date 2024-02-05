@@ -1,3 +1,53 @@
+.modalWrap {
+  width: 380px;
+  position: absolute;
+  left: 0;
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 380px;
+    height: 560px;
+    border: 1px solid #ccc;
+    &:first-child {
+      display: block;
+      background: #fff url("/img/modal1.jpg") center top no-repeat;
+      background-size: 100% 94%;
+      z-index: 100;
+    }
+    &:nth-child(2) {
+      display: block;
+      background: #fff url("/img/modal2.png") center top no-repeat;
+      background-size: 100% 94%;
+      z-index: 80;
+    }
+    &:last-child {
+      display: block;
+      background: #fff url("/img/modal3.jpg") center top no-repeat;
+      background-size: 100% 94%;
+      z-index: 60;
+    }
+    .close {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+      label[for="close"] {
+        font-size: 0.8rem;
+        padding-right: 12px;
+      }
+      input[type="button"] {
+        cursor: pointer;
+        font-size: 0.72rem;
+        background-color: transparent;
+        border: 1px solid #333;
+      }
+    }
+  }
+}
+
 main {
   .imgSlide {
     position: relative;
@@ -466,8 +516,8 @@ main {
 @media screen and (max-width: 1199px) {
   //가로 해상도가 1200px 미만인 화면에 적용
   .main {
-    .imgBox {
-      height: 600px !important;
+    .imgSlide {
+      height: 700px !important;
     }
     article {
       width: 90% !important;
@@ -494,6 +544,13 @@ main {
           display: none;
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main {
+    .imgSlide {
+      height: 600px !important;
     }
   }
 }
