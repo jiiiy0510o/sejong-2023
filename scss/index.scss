@@ -86,7 +86,7 @@ main {
       }
     }
     .imgBox {
-      height: 800px;
+      height: 680px;
       img {
         position: absolute;
         left: 0;
@@ -153,7 +153,7 @@ main {
       z-index: 3;
       padding: 4px 24px;
       width: 1152px;
-      height: 420px;
+      height: 402px;
 
       .exhibit {
         width: 840px;
@@ -515,42 +515,15 @@ main {
 
 @media screen and (max-width: 1199px) {
   //가로 해상도가 1200px 미만인 화면에 적용
-  .main {
-    .imgSlide {
-      height: 700px !important;
-    }
-    article {
-      width: 90% !important;
-      .eventSlide {
-        margin: 0 auto;
-        width: 83.6% !important;
-        flex-wrap: wrap;
-        .exhibit {
-          width: 100% !important;
-          img {
-            height: 328px !important;
-          }
-        }
-        .closure {
-          width: 100% !important;
-        }
-      }
-      .flexBoard {
-        width: 90%;
-      }
-      &.introduce {
-        .left,
-        .right {
-          display: none;
-        }
-      }
-    }
+
+  .left,
+  .right {
+    display: none !important;
   }
 }
 @media screen and (max-width: 1024px) {
-  .main {
-    .imgSlide {
-      height: 600px !important;
-    }
+  //가로 해상도가 10250px 미만인 화면에 적용
+  .topBtn {
+    display: none;
   }
 }

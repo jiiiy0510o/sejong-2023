@@ -55,20 +55,26 @@ body header nav ul li ul {
   bottom: -100px;
   z-index: 100;
 }
-body header .nation {
-  width: 30px;
-  height: 30px;
+body header .nation_menu {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body header .nation_menu .nation {
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #ddd;
-  position: relative;
-  margin-top: 2px;
 }
-body header .nation img {
-  position: absolute;
-  left: 0px;
-  top: 5px;
-  width: 30px;
+body header .nation_menu .nation img {
+  width: 32px;
+  height: 32px;
+}
+body header .nation_menu .menu img {
+  width: 24px;
+  height: 24px;
 }
 body header .showNav {
   display: flex;
@@ -362,5 +368,16 @@ body footer .footerInfo div:last-child img {
   }
   .fixBar {
     display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    justify-content: space-between !important;
+  }
+  header nav {
+    display: none !important;
+  }
+  header .nation_menu img:last-child {
+    display: block !important;
   }
 }

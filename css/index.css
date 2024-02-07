@@ -84,7 +84,7 @@ main .imgSlide .slider div.mark {
   width: 32px;
 }
 main .imgSlide .imgBox {
-  height: 800px;
+  height: 680px;
 }
 main .imgSlide .imgBox img {
   position: absolute;
@@ -147,7 +147,7 @@ main article .eventSlide {
   z-index: 3;
   padding: 4px 24px;
   width: 1152px;
-  height: 420px;
+  height: 402px;
 }
 main article .eventSlide .exhibit {
   width: 840px;
@@ -490,36 +490,13 @@ main article.introduce .placeContainer .placeWrap .place dl dt {
 }
 
 @media screen and (max-width: 1199px) {
-  .main .imgSlide {
-    height: 700px !important;
-  }
-  .main article {
-    width: 90% !important;
-  }
-  .main article .eventSlide {
-    margin: 0 auto;
-    width: 83.6% !important;
-    flex-wrap: wrap;
-  }
-  .main article .eventSlide .exhibit {
-    width: 100% !important;
-  }
-  .main article .eventSlide .exhibit img {
-    height: 328px !important;
-  }
-  .main article .eventSlide .closure {
-    width: 100% !important;
-  }
-  .main article .flexBoard {
-    width: 90%;
-  }
-  .main article.introduce .left,
-  .main article.introduce .right {
-    display: none;
+  .left,
+  .right {
+    display: none !important;
   }
 }
 @media screen and (max-width: 1024px) {
-  .main .imgSlide {
-    height: 600px !important;
+  .topBtn {
+    display: none;
   }
 }
